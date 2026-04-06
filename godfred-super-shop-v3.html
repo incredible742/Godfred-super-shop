@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Godfred Super Shop – Mamprobi Rainbow, Accra</title>
+<meta name="description" content="Godfred Super Shop – Sports equipment, shoes, jerseys, electronics, bicycles, smartphones, houses, land and more. Mamprobi Rainbow, Accra. Secure payment. Fast delivery."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+/* ── Tokens ──────────────────────────────────────────── */
+:root{
+  --navy:#0a2540;--navy2:#0e3260;--blue:#1a6ef5;--blue2:#3d87ff;
+  --gold:#f5a623;--gold2:#ffc043;--green:#00b341;--red:#d62828;
+  --white:#fff;--off:#f4f7fc;--muted:#8899aa;--text:#1c2b3a;
+  --card:#fff;
+  --shadow:0 4px 24px rgba(10,37,64,.10);
+  --shadow2:0 12px 40px rgba(10,37,64,.18);
+  --radius:14px;--radius2:22px;
+  --ff-head:'Syne',sans-serif;--ff-body:'DM Sans',sans-serif;
+  --trans:all .25s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-body);color:var(--text);background:var(--off);overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:var(--ff-body);}
+
+/* ── Utilities ───────────────────────────────────────── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.section-label{font-family:var(--ff-head);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.section-title{font-family:var(--ff-head);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:var(--navy);line-height:1.15;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-weight:600;font-size:.95rem;transition:var(--trans);border:none;}
+.btn-primary{background:var(--blue);color:#fff;}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,110,245,.35);}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy);}
+.btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px);}
+.btn-whatsapp{background:#25D366;color:#fff;}
+.btn-whatsapp:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.35);}
+.btn-gold{background:var(--gold);color:var(--navy);}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-red{background:var(--red);color:#fff;}
+.btn-red:hover{background:#b02020;transform:translateY(-2px);}
+.badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+.badge-new{background:#e8f4ff;color:var(--blue);}
+.badge-sale{background:#fff0e8;color:#e8520a;}
+.badge-hot{background:#fff0f0;color:#d62828;}
+.badge-best{background:#f0fff0;color:#007a25;}
+.badge-land{background:#f0fff4;color:#007a25;}
+.badge-house{background:#fff8e1;color:#c77c00;}
+
+/* ── Marquee Ticker ──────────────────────────────────── */
+.ticker-wrap{background:var(--blue);color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-block;animation:ticker 30s linear infinite;}
+.ticker-inner span{padding:0 40px;font-size:.82rem;font-weight:600;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ── Topbar ──────────────────────────────────────────── */
+.topbar{background:var(--navy);color:rgba(255,255,255,.7);font-size:.8rem;padding:7px 0;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.topbar a{color:rgba(255,255,255,.7);}
+.topbar a:hover{color:var(--gold);}
+.topbar-right{display:flex;gap:18px;align-items:center;}
+
+/* ── Header ──────────────────────────────────────────── */
+header{background:var(--white);box-shadow:0 2px 16px rgba(10,37,64,.08);position:sticky;top:0;z-index:1000;transition:var(--trans);}
+header.scrolled{box-shadow:0 4px 30px rgba(10,37,64,.15);}
+nav .container{display:flex;align-items:center;gap:24px;padding-top:14px;padding-bottom:14px;}
+.logo{font-family:var(--ff-head);font-weight:800;font-size:1.3rem;color:var(--navy);display:flex;align-items:center;gap:10px;white-space:nowrap;}
+.logo-icon{width:40px;height:40px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.logo span{color:var(--blue);}
+.nav-links{display:flex;list-style:none;gap:4px;flex:1;flex-wrap:wrap;}
+.nav-links a{padding:7px 12px;border-radius:8px;font-size:.88rem;font-weight:500;color:var(--text);transition:var(--trans);}
+.nav-links a:hover,.nav-links a.active{background:var(--off);color:var(--blue);}
+.nav-actions{display:flex;align-items:center;gap:8px;margin-left:auto;}
+.icon-btn{width:40px;height:40px;border-radius:10px;border:none;background:var(--off);display:flex;align-items:center;justify-content:center;font-size:1.15rem;transition:var(--trans);position:relative;}
+.icon-btn:hover{background:#e2e8f0;transform:scale(1.08);}
+.cart-count{position:absolute;top:-5px;right:-5px;background:var(--blue);color:#fff;font-size:.65rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;animation:pop .3s cubic-bezier(.36,.07,.19,.97);}
+@keyframes pop{0%{transform:scale(0);}60%{transform:scale(1.3);}100%{transform:scale(1);}}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:var(--trans);}
+
+/* ── Search Bar ─────────────────────────────────────── */
+.search-wrap{position:relative;flex:1;max-width:320px;}
+.search-bar{display:flex;align-items:center;background:var(--off);border:2px solid transparent;border-radius:50px;padding:8px 16px;gap:8px;transition:var(--trans);}
+.search-bar:focus-within{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(26,110,245,.12);}
+.search-bar input{border:none;background:transparent;outline:none;font-family:var(--ff-body);font-size:.88rem;color:var(--text);width:100%;}
+.search-bar input::placeholder{color:var(--muted);}
+.search-bar button{border:none;background:none;color:var(--muted);font-size:1rem;transition:var(--trans);}
+.search-bar button:hover{color:var(--blue);}
+.search-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border-radius:14px;box-shadow:var(--shadow2);max-height:320px;overflow-y:auto;z-index:2000;display:none;border:1px solid #e8eef8;}
+.search-dropdown.open{display:block;animation:fadeDown .2s ease;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:none;}}
+.search-result-item{display:flex;align-items:center;gap:12px;padding:11px 16px;cursor:pointer;transition:var(--trans);}
+.search-result-item:hover{background:var(--off);}
+.search-result-icon{font-size:1.5rem;width:36px;height:36px;background:var(--off);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.search-result-info{flex:1;}
+.search-result-name{font-weight:600;font-size:.88rem;color:var(--navy);}
+.search-result-price{font-size:.78rem;color:var(--blue);font-weight:700;}
+.search-result-cat{font-size:.72rem;color:var(--muted);text-transform:uppercase;}
+.search-no-result{padding:24px;text-align:center;color:var(--muted);font-size:.88rem;}
+
+.auth-btn{background:var(--navy);color:#fff;padding:8px 18px;border-radius:50px;font-size:.85rem;font-weight:600;border:none;transition:var(--trans);display:flex;align-items:center;gap:6px;}
+.auth-btn:hover{background:var(--blue);}
+.auth-btn.logged-in{background:var(--green);}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#0c2d5a 100%);color:#fff;padding:80px 0 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,110,245,.25) 0%,transparent 70%);border-radius:50%;animation:pulse 4s ease-in-out infinite;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(245,166,35,.15) 0%,transparent 70%);border-radius:50%;animation:pulse 4s ease-in-out infinite .5s;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.8;}50%{transform:scale(1.1);opacity:1;}}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.35);color:var(--gold2);font-size:.8rem;font-weight:600;letter-spacing:.08em;padding:5px 14px;border-radius:30px;margin-bottom:20px;text-transform:uppercase;animation:slideInLeft .6s ease both;}
+.hero h1{font-family:var(--ff-head);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:20px;animation:slideInLeft .6s ease .1s both;}
+.hero h1 span{color:var(--gold2);}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:36px;max-width:440px;animation:slideInLeft .6s ease .2s both;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:slideInLeft .6s ease .3s both;}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px);}to{opacity:1;transform:none;}}
+.hero-stats{display:flex;gap:28px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.12);animation:slideInLeft .6s ease .4s both;}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--ff-head);font-size:1.7rem;font-weight:800;color:var(--gold2);}
+.stat-label{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:2px;}
+.hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:14px;animation:slideInRight .6s ease .2s both;}
+@keyframes slideInRight{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:none;}}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;backdrop-filter:blur(10px);transition:var(--trans);animation:floatCard 4s ease-in-out infinite;}
+.hero-card:hover{background:rgba(255,255,255,.14);transform:translateY(-8px) scale(1.02);}
+.hero-card:nth-child(2){animation-delay:.5s;}
+.hero-card:nth-child(3){animation-delay:1s;}
+.hero-card:nth-child(4){animation-delay:1.5s;}
+@keyframes floatCard{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.hero-card-icon{font-size:2rem;}
+.hero-card-label{font-size:.78rem;color:rgba(255,255,255,.6);}
+.hero-card-title{font-family:var(--ff-head);font-size:.92rem;font-weight:700;color:#fff;}
+
+/* ── Trust Strip ─────────────────────────────────────── */
+.trust-strip{background:var(--white);border-bottom:1px solid #e8eef8;padding:16px 0;}
+.trust-inner{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;align-items:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--navy);}
+.trust-item span:first-child{font-size:1.2rem;}
+
+/* ── Categories ──────────────────────────────────────── */
+.categories{padding:72px 0 40px;}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px;margin-top:36px;}
+.cat-card{background:var(--card);border-radius:var(--radius);padding:20px 12px;text-align:center;transition:var(--trans);cursor:pointer;border:2px solid transparent;box-shadow:var(--shadow);}
+.cat-card:hover,.cat-card.active{border-color:var(--blue);transform:translateY(-4px);box-shadow:var(--shadow2);}
+.cat-card.active .cat-icon{animation:bounce .5s ease;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.cat-icon{font-size:2rem;margin-bottom:8px;transition:var(--trans);}
+.cat-name{font-weight:600;font-size:.82rem;color:var(--text);}
+.cat-count{font-size:.72rem;color:var(--muted);margin-top:2px;}
+
+/* ── Products ────────────────────────────────────────── */
+.products{padding:48px 0 80px;}
+.products-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:16px;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px;}
+.product-card{background:var(--card);border-radius:var(--radius2);overflow:hidden;box-shadow:var(--shadow);transition:var(--trans);position:relative;}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(10,37,64,.2);}
+.product-card:hover .add-cart-btn{background:var(--blue);transform:scale(1.1);}
+.product-img{width:100%;height:190px;background:linear-gradient(135deg,#e8eef8,#d0dcf0);display:flex;align-items:center;justify-content:center;font-size:3.8rem;position:relative;overflow:hidden;}
+.product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(10,37,64,.05));pointer-events:none;}
+.product-badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:5px;}
+.product-wishlist{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);border:none;display:flex;align-items:center;justify-content:center;font-size:.92rem;transition:var(--trans);backdrop-filter:blur(4px);}
+.product-wishlist:hover{background:#fff;transform:scale(1.2);}
+.product-wishlist.active{color:#e8520a;}
+.product-info{padding:16px 16px 18px;}
+.product-cat{font-size:.7rem;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.product-name{font-family:var(--ff-head);font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:5px;line-height:1.3;}
+.product-desc{font-size:.8rem;color:var(--muted);margin-bottom:10px;line-height:1.5;}
+.product-rating{display:flex;align-items:center;gap:5px;margin-bottom:12px;}
+.stars{color:var(--gold);font-size:.82rem;letter-spacing:1px;}
+.rating-count{font-size:.76rem;color:var(--muted);}
+.product-footer{display:flex;align-items:center;justify-content:space-between;}
+.product-price{font-family:var(--ff-head);font-size:1.18rem;font-weight:800;color:var(--navy);}
+.product-price .old{font-size:.82rem;font-weight:400;color:var(--muted);text-decoration:line-through;margin-right:4px;}
+.add-cart-btn{width:36px;height:36px;border-radius:10px;background:var(--navy);color:#fff;border:none;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:var(--trans);}
+
+/* ── About Section ───────────────────────────────────── */
+.about{padding:80px 0;background:var(--white);}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-visual{position:relative;}
+.about-main-card{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:var(--radius2);padding:48px 40px;color:#fff;position:relative;overflow:hidden;}
+.about-main-card::before{content:'🏪';font-size:8rem;position:absolute;bottom:-20px;right:-10px;opacity:.12;}
+.about-main-card h2{font-family:var(--ff-head);font-size:2rem;font-weight:800;margin-bottom:12px;}
+.about-main-card p{color:rgba(255,255,255,.75);line-height:1.7;font-size:.95rem;}
+.about-tag{display:inline-block;background:rgba(245,166,35,.2);border:1px solid rgba(245,166,35,.4);color:var(--gold2);font-size:.75rem;font-weight:700;letter-spacing:.1em;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin-bottom:16px;}
+.about-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
+.about-stat{background:rgba(255,255,255,.08);border-radius:12px;padding:18px;text-align:center;transition:var(--trans);}
+.about-stat:hover{background:rgba(255,255,255,.14);transform:translateY(-3px);}
+.about-stat-num{font-family:var(--ff-head);font-size:1.5rem;font-weight:800;color:var(--gold2);}
+.about-stat-label{font-size:.75rem;color:rgba(255,255,255,.6);margin-top:3px;}
+.about-text .section-label{margin-bottom:8px;}
+.about-text .section-title{margin-bottom:18px;}
+.about-text p{color:var(--muted);line-height:1.8;margin-bottom:16px;}
+.about-text p strong{color:var(--text);}
+.about-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:20px 0 28px;}
+.about-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text);}
+.about-list li::before{content:'✅';font-size:1rem;}
+/* Mission, Vision, Values cards */
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;}
+.mvv-card{background:var(--off);border-radius:var(--radius);padding:22px;border-left:4px solid var(--blue);transition:var(--trans);}
+.mvv-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.mvv-card h4{font-family:var(--ff-head);font-weight:700;color:var(--navy);margin-bottom:8px;font-size:.9rem;}
+.mvv-card p{font-size:.82rem;color:var(--muted);line-height:1.6;}
+
+/* ── Team Section ────────────────────────────────────── */
+.team{padding:80px 0;background:var(--off);}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:48px;}
+.team-card{background:var(--white);border-radius:var(--radius2);padding:32px 24px;text-align:center;box-shadow:var(--shadow);transition:var(--trans);}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
+.team-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 16px;}
+.team-name{font-family:var(--ff-head);font-weight:700;color:var(--navy);margin-bottom:4px;}
+.team-role{font-size:.82rem;color:var(--blue);font-weight:600;margin-bottom:10px;}
+.team-bio{font-size:.8rem;color:var(--muted);line-height:1.6;}
+
+/* ── Testimonials ────────────────────────────────────── */
+.testimonials{padding:80px 0;background:var(--white);}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:48px;}
+.review-card{background:var(--off);border-radius:var(--radius2);padding:28px;transition:var(--trans);border:2px solid transparent;}
+.review-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:var(--shadow);}
+.review-stars{color:var(--gold);font-size:1rem;margin-bottom:12px;letter-spacing:2px;}
+.review-text{font-size:.9rem;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic;}
+.reviewer{display:flex;align-items:center;gap:12px;}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;}
+.reviewer-name{font-weight:700;font-size:.88rem;color:var(--navy);}
+.reviewer-loc{font-size:.76rem;color:var(--muted);}
+
+/* ── Features / Trust Pillars ────────────────────────── */
+.features{padding:80px 0;background:var(--off);}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+.feature-card{padding:28px 22px;background:var(--white);border-radius:var(--radius2);text-align:center;transition:var(--trans);border:2px solid transparent;}
+.feature-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);border-color:var(--blue);}
+.feature-icon{width:60px;height:60px;border-radius:16px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;transition:var(--trans);}
+.feature-card:hover .feature-icon{background:var(--blue);transform:rotate(10deg) scale(1.1);}
+.feature-title{font-family:var(--ff-head);font-weight:700;font-size:1rem;margin-bottom:8px;color:var(--navy);}
+.feature-desc{font-size:.84rem;color:var(--muted);line-height:1.6;}
+
+/* ── Delivery Section ────────────────────────────────── */
+.delivery{padding:80px 0;background:var(--white);}
+.delivery-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.delivery-steps{display:flex;flex-direction:column;gap:24px;}
+.d-step{display:flex;gap:20px;align-items:flex-start;padding:16px;border-radius:var(--radius);transition:var(--trans);}
+.d-step:hover{background:var(--off);}
+.d-step-num{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--ff-head);font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--trans);}
+.d-step:hover .d-step-num{background:var(--navy);transform:scale(1.1);}
+.d-step-body h4{font-family:var(--ff-head);font-weight:700;color:var(--navy);margin-bottom:5px;}
+.d-step-body p{font-size:.85rem;color:var(--muted);line-height:1.6;}
+.delivery-areas{background:var(--off);border-radius:var(--radius2);padding:36px;}
+.delivery-areas h3{font-family:var(--ff-head);font-weight:700;font-size:1.2rem;color:var(--navy);margin-bottom:20px;}
+.area-tag{display:inline-block;background:var(--white);border:1px solid #dde3ee;padding:7px 14px;border-radius:8px;font-size:.82rem;font-weight:500;margin:4px;transition:var(--trans);cursor:default;}
+.area-tag:hover{border-color:var(--blue);color:var(--blue);}
+.delivery-areas .area-tag.featured{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* GPS Location Button */
+.gps-btn{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a6ef5,#0e3260);color:#fff;border:none;border-radius:12px;padding:14px 20px;font-size:.88rem;font-weight:600;width:100%;margin-top:20px;transition:var(--trans);}
+.gps-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,110,245,.35);}
+.gps-btn.detecting{animation:glowPulse 1s ease-in-out infinite;}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 0 0 rgba(26,110,245,.4);}50%{box-shadow:0 0 0 10px rgba(26,110,245,0);}}
+.location-result{background:#e8f4ff;border:2px solid var(--blue);border-radius:12px;padding:14px;margin-top:12px;font-size:.85rem;display:none;}
+.location-result.show{display:block;animation:fadeDown .3s ease;}
+
+/* ── Banner Strip ────────────────────────────────────── */
+.banner-strip{background:linear-gradient(90deg,var(--navy) 0%,var(--navy2) 100%);padding:48px 0;color:#fff;position:relative;overflow:hidden;}
+.banner-strip::before{content:'';position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(245,166,35,.15) 0%,transparent 70%);border-radius:50%;}
+.banner-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;position:relative;z-index:1;}
+.banner-title{font-family:var(--ff-head);font-size:1.8rem;font-weight:800;margin-bottom:8px;}
+.banner-title span{color:var(--gold2);}
+.banner-sub{color:rgba(255,255,255,.7);font-size:.95rem;}
+.banner-actions{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+
+/* ── Contact Section ─────────────────────────────────── */
+.contact-section{padding:80px 0;background:var(--off);}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.contact-card{background:var(--white);border-radius:var(--radius2);padding:36px;box-shadow:var(--shadow);}
+.contact-card h3{font-family:var(--ff-head);font-weight:700;font-size:1.2rem;color:var(--navy);margin-bottom:24px;}
+.contact-info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.contact-info-icon{width:44px;height:44px;border-radius:12px;background:var(--off);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.contact-info-text strong{display:block;font-size:.88rem;color:var(--navy);margin-bottom:2px;}
+.contact-info-text span{font-size:.85rem;color:var(--muted);}
+.contact-info-text a{color:var(--blue);font-weight:600;}
+/* Social Channels */
+.social-channel{display:flex;align-items:center;gap:14px;padding:14px;border-radius:var(--radius);border:2px solid #e8eef8;transition:var(--trans);margin-bottom:12px;cursor:pointer;}
+.social-channel:hover{border-color:var(--blue);transform:translateX(4px);}
+.social-channel-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.social-channel.facebook .social-channel-icon{background:#e8f0fe;}
+.social-channel.whatsapp .social-channel-icon{background:#e8fdf0;}
+.social-channel.instagram .social-channel-icon{background:#fde8f0;}
+.social-channel.tiktok .social-channel-icon{background:#f0f0f0;}
+.social-channel.youtube .social-channel-icon{background:#fde8e8;}
+.social-channel.call .social-channel-icon{background:#e8f4ff;}
+.social-channel-info strong{display:block;font-size:.9rem;color:var(--navy);}
+.social-channel-info span{font-size:.8rem;color:var(--muted);}
+.social-channel-arrow{margin-left:auto;color:var(--muted);font-size:.9rem;}
+/* Contact Form */
+.contact-form-group{margin-bottom:16px;}
+.contact-form-label{display:block;font-weight:600;font-size:.85rem;color:var(--navy);margin-bottom:7px;}
+.contact-form-input{width:100%;padding:11px 16px;border:2px solid #dde3ee;border-radius:10px;font-family:var(--ff-body);font-size:.9rem;color:var(--text);transition:var(--trans);outline:none;}
+.contact-form-input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,110,245,.1);}
+.contact-form-textarea{resize:vertical;min-height:110px;}
+
+/* ── Social / App Links ──────────────────────────────── */
+.app-links{padding:60px 0;background:var(--navy);}
+.app-links-inner{text-align:center;color:#fff;}
+.app-links-inner h2{font-family:var(--ff-head);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:10px;}
+.app-links-inner p{color:rgba(255,255,255,.65);margin-bottom:36px;}
+.social-apps{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+.app-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px 28px;display:flex;align-items:center;gap:14px;transition:var(--trans);color:#fff;}
+.app-card:hover{transform:translateY(-6px) scale(1.03);}
+.app-card-icon{font-size:2rem;}
+.app-card-label{font-size:.78rem;color:rgba(255,255,255,.55);display:block;}
+.app-card-name{font-family:var(--ff-head);font-weight:700;font-size:1rem;}
+.app-card.facebook:hover{background:#1877f2;border-color:#1877f2;box-shadow:0 8px 24px rgba(24,119,242,.4);}
+.app-card.tiktok:hover{background:#010101;border-color:#69c9d0;box-shadow:0 8px 24px rgba(105,201,208,.4);}
+.app-card.instagram:hover{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:#dc2743;}
+.app-card.whatsapp:hover{background:#25D366;border-color:#25D366;box-shadow:0 8px 24px rgba(37,211,102,.4);}
+.app-card.youtube:hover{background:#ff0000;border-color:#ff0000;box-shadow:0 8px 24px rgba(255,0,0,.4);}
+.app-card.call:hover{background:var(--blue);border-color:var(--blue);box-shadow:0 8px 24px rgba(26,110,245,.4);}
+
+/* ── Cart Drawer ─────────────────────────────────────── */
+.cart-overlay{position:fixed;inset:0;background:rgba(10,37,64,.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s;}
+.cart-overlay.open{opacity:1;pointer-events:all;}
+.cart-drawer{position:fixed;top:0;right:0;width:390px;max-width:100vw;height:100vh;background:var(--white);box-shadow:-8px 0 48px rgba(10,37,64,.18);z-index:2001;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);}
+.cart-drawer.open{transform:translateX(0);}
+.cart-header{padding:20px 24px;border-bottom:1px solid #e8eef8;display:flex;align-items:center;justify-content:space-between;}
+.cart-header h3{font-family:var(--ff-head);font-weight:700;font-size:1.1rem;}
+.close-cart{background:var(--off);border:none;border-radius:8px;width:34px;height:34px;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:var(--trans);}
+.close-cart:hover{background:#e2e8f0;}
+.cart-items{flex:1;overflow-y:auto;padding:16px 24px;}
+.cart-item{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #f0f4fa;animation:slideIn .3s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
+.cart-item-img{width:54px;height:54px;border-radius:10px;background:var(--off);display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;}
+.cart-item-info{flex:1;}
+.cart-item-name{font-weight:600;font-size:.88rem;margin-bottom:3px;}
+.cart-item-price{font-family:var(--ff-head);font-weight:700;color:var(--blue);font-size:.9rem;}
+.cart-item-qty{display:flex;align-items:center;gap:7px;margin-top:5px;}
+.qty-btn{width:24px;height:24px;border-radius:6px;border:1px solid #dde3ee;background:#fff;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:var(--trans);}
+.qty-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+.qty-num{font-weight:600;font-size:.88rem;min-width:18px;text-align:center;}
+.remove-item{color:var(--muted);font-size:1rem;background:none;border:none;transition:var(--trans);}
+.remove-item:hover{color:#d62828;transform:scale(1.2);}
+.cart-footer{padding:20px 24px;border-top:1px solid #e8eef8;}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.cart-total-label{font-weight:600;}
+.cart-total-amount{font-family:var(--ff-head);font-size:1.35rem;font-weight:800;color:var(--navy);}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted);}
+.cart-empty-icon{font-size:3rem;margin-bottom:14px;animation:floatCard 3s ease-in-out infinite;}
+.checkout-btn-row{display:flex;flex-direction:column;gap:10px;}
+
+/* ── Checkout Modal ──────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,37,64,.6);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--white);border-radius:var(--radius2);max-width:540px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 24px 80px rgba(10,37,64,.3);animation:modalIn .3s cubic-bezier(.4,0,.2,1);}
+@keyframes modalIn{from{transform:scale(.93) translateY(24px);opacity:0;}to{transform:scale(1) translateY(0);opacity:1;}}
+.modal-header{padding:24px 28px 0;display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.modal-header h2{font-family:var(--ff-head);font-weight:800;font-size:1.3rem;color:var(--navy);}
+.modal-close{background:var(--off);border:none;border-radius:8px;width:34px;height:34px;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:var(--trans);}
+.modal-close:hover{background:#e2e8f0;transform:rotate(90deg);}
+.modal-body{padding:0 28px 28px;}
+.form-group{margin-bottom:18px;}
+.form-label{display:block;font-weight:600;font-size:.85rem;color:var(--navy);margin-bottom:7px;}
+.form-input{width:100%;padding:11px 16px;border:2px solid #dde3ee;border-radius:10px;font-family:var(--ff-body);font-size:.9rem;color:var(--text);transition:var(--trans);outline:none;}
+.form-input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,110,245,.1);}
+.form-input.error{border-color:var(--red);}
+.form-input.success{border-color:var(--green);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field-error{font-size:.78rem;color:var(--red);margin-top:4px;display:none;}
+.field-error.show{display:block;}
+/* payment tabs */
+.pay-tabs{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap;}
+.pay-tab{flex:1;min-width:120px;padding:12px 10px;border:2px solid #dde3ee;border-radius:12px;background:#fff;cursor:pointer;transition:var(--trans);text-align:center;font-weight:600;font-size:.82rem;color:var(--muted);}
+.pay-tab:hover{border-color:#b0c0d8;}
+.pay-tab.active{border-color:var(--blue);color:var(--blue);background:#f0f6ff;}
+.pay-tab-icon{font-size:1.5rem;display:block;margin-bottom:4px;}
+.pay-panel{display:none;}
+.pay-panel.active{display:block;animation:fadeDown .25s ease;}
+.order-summary{background:var(--off);border-radius:12px;padding:18px;margin-bottom:20px;}
+.order-summary h4{font-family:var(--ff-head);font-weight:700;font-size:.95rem;margin-bottom:12px;color:var(--navy);}
+.order-line{display:flex;justify-content:space-between;font-size:.85rem;padding:4px 0;}
+.order-line.total{border-top:2px solid #dde3ee;margin-top:8px;padding-top:12px;font-weight:800;font-size:1rem;font-family:var(--ff-head);color:var(--navy);}
+.card-icons{display:flex;gap:8px;margin-top:8px;}
+.card-icon{background:var(--off);border:1px solid #dde3ee;border-radius:6px;padding:4px 8px;font-size:.75rem;font-weight:700;}
+/* Payment step progress */
+.pay-steps{display:flex;align-items:center;gap:0;margin-bottom:20px;}
+.pay-step{flex:1;text-align:center;font-size:.75rem;font-weight:600;color:var(--muted);position:relative;}
+.pay-step::after{content:'';position:absolute;top:12px;right:0;width:50%;height:2px;background:#e8eef8;}
+.pay-step:last-child::after{display:none;}
+.pay-step-dot{width:24px;height:24px;border-radius:50%;background:#e8eef8;margin:0 auto 5px;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;}
+.pay-step.done .pay-step-dot{background:var(--green);color:#fff;}
+.pay-step.active .pay-step-dot{background:var(--blue);color:#fff;}
+
+/* ── Auth Modal ──────────────────────────────────────── */
+.auth-tabs{display:flex;border-bottom:2px solid #e8eef8;margin-bottom:24px;}
+.auth-tab{flex:1;padding:12px;border:none;background:none;font-family:var(--ff-head);font-weight:700;font-size:.95rem;color:var(--muted);cursor:pointer;transition:var(--trans);border-bottom:3px solid transparent;margin-bottom:-2px;}
+.auth-tab.active{color:var(--blue);border-bottom-color:var(--blue);}
+.auth-panel{display:none;}
+.auth-panel.active{display:block;animation:fadeDown .2s ease;}
+.social-login{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+.social-login-btn{display:flex;align-items:center;gap:12px;padding:11px 16px;border:2px solid #dde3ee;border-radius:10px;background:#fff;font-weight:600;font-size:.88rem;cursor:pointer;transition:var(--trans);}
+.social-login-btn:hover{border-color:var(--blue);background:#f0f6ff;transform:translateY(-1px);}
+.divider{text-align:center;color:var(--muted);font-size:.82rem;margin:16px 0;position:relative;}
+.divider::before,.divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:#e8eef8;}
+.divider::before{left:0;}
+.divider::after{right:0;}
+.auth-footer{text-align:center;font-size:.85rem;color:var(--muted);margin-top:16px;}
+.auth-footer a{color:var(--blue);font-weight:600;}
+/* Password strength */
+.pw-strength{height:4px;border-radius:2px;background:#e8eef8;margin-top:8px;overflow:hidden;}
+.pw-strength-bar{height:100%;border-radius:2px;transition:width .4s,background .4s;width:0;}
+.pw-hint{font-size:.76rem;color:var(--muted);margin-top:4px;}
+/* Logged in user display */
+.user-menu{position:relative;}
+.user-dropdown{position:absolute;top:calc(100%+8px);right:0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow2);padding:8px;min-width:200px;z-index:2000;display:none;animation:fadeDown .2s ease;border:1px solid #e8eef8;}
+.user-dropdown.open{display:block;}
+.user-dropdown-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;font-size:.88rem;color:var(--text);cursor:pointer;transition:var(--trans);}
+.user-dropdown-item:hover{background:var(--off);}
+
+/* ── Toast ───────────────────────────────────────────── */
+#toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 24px;border-radius:50px;font-size:.88rem;font-weight:500;z-index:9999;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;max-width:90vw;text-align:center;}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+#toast.success{background:var(--green);}
+#toast.error{background:var(--red);}
+
+/* ── Animations ──────────────────────────────────────── */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s, transform .6s;}
+.fade-in.visible{opacity:1;transform:none;}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity .6s, transform .6s;}
+.fade-in-left.visible{opacity:1;transform:none;}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity .6s, transform .6s;}
+.fade-in-right.visible{opacity:1;transform:none;}
+/* Shimmer loading */
+@keyframes shimmer{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
+.skeleton{background:linear-gradient(90deg,#e8eef8 25%,#f4f7fc 50%,#e8eef8 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;}
+
+/* ── Footer ──────────────────────────────────────────── */
+footer{background:var(--navy);color:rgba(255,255,255,.75);padding:64px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px;}
+.footer-brand .logo{color:#fff;margin-bottom:16px;}
+.footer-brand p{font-size:.86rem;line-height:1.7;max-width:280px;margin-bottom:22px;}
+.social-links{display:flex;gap:10px;}
+.social-link{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:var(--trans);}
+.social-link:hover{background:var(--blue);transform:translateY(-3px);}
+.footer-col h4{font-family:var(--ff-head);font-weight:700;color:#fff;margin-bottom:16px;font-size:.93rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:.86rem;transition:var(--trans);}
+.footer-links a:hover{color:var(--gold2);padding-left:4px;}
+.contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:.86rem;}
+.contact-icon{font-size:1rem;margin-top:1px;}
+.pay-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.pay-badge{background:rgba(255,255,255,.12);border-radius:6px;padding:5px 10px;font-size:.72rem;font-weight:700;transition:var(--trans);}
+.pay-badge:hover{background:rgba(255,255,255,.22);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.8rem;}
+
+/* ── Floating WhatsApp Button ────────────────────────── */
+.fab-whatsapp{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;z-index:1500;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:var(--trans);text-decoration:none;animation:fabFloat 3s ease-in-out infinite;}
+.fab-whatsapp:hover{transform:scale(1.12);box-shadow:0 8px 30px rgba(37,211,102,.6);}
+@keyframes fabFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media(max-width:1100px){
+  .cat-grid{grid-template-columns:repeat(4,1fr);}
+  .features-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .mvv-grid{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  .contact-inner{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .hero-inner,.about-inner,.delivery-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .hamburger{display:flex;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:12px 24px 20px;box-shadow:0 10px 30px rgba(10,37,64,.12);}
+  .nav-links.mobile-open{display:flex;}
+  .search-wrap{display:none;}
+  .form-row{grid-template-columns:1fr;}
+  .features-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .banner-inner{grid-template-columns:1fr;}
+  .about-stats-row{grid-template-columns:repeat(3,1fr);}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  .testimonials-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .features-grid{grid-template-columns:1fr;}
+  .trust-inner{gap:16px;}
+  .hero-stats{gap:16px;}
+  .about-stats-row{grid-template-columns:1fr 1fr;}
+  .team-grid{grid-template-columns:1fr;}
+  .mvv-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── Ticker ───────────────────────────────────────────────── -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>🎉 FREE DELIVERY on orders above GH₵ 500!</span>
+    <span>📱 New iPhone 15 & Samsung Galaxy S24 in stock!</span>
+    <span>🏠 Houses & Land listings now available!</span>
+    <span>⚽ Sports gear sale — up to 30% off!</span>
+    <span>💬 WhatsApp us: +233 53 838 7322</span>
+    <span>🔒 Secure MTN MoMo & Card payments</span>
+    <span>🎉 FREE DELIVERY on orders above GH₵ 500!</span>
+    <span>📱 New iPhone 15 & Samsung Galaxy S24 in stock!</span>
+    <span>🏠 Houses & Land listings now available!</span>
+    <span>⚽ Sports gear sale — up to 30% off!</span>
+    <span>💬 WhatsApp us: +233 53 838 7322</span>
+    <span>🔒 Secure MTN MoMo & Card payments</span>
+  </div>
+</div>
+
+<!-- ─── Topbar ──────────────────────────────────────────────── -->
+<div class="topbar">
+  <div class="container">
+    <div>📍 Mamprobi Rainbow, Accra, Ghana &nbsp;|&nbsp; ☎️ <a href="tel:+233538387322">+233 53 838 7322</a></div>
+    <div class="topbar-right">
+      <span>Mon–Sat: 8am – 8pm</span>
+      <a href="mailto:godfredsupershop@gmail.com">✉️ godfredsupershop@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Header ──────────────────────────────────────────────── -->
+<header id="mainHeader">
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">🏪</div>
+        Godfred <span>Super Shop</span>
+      </a>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <button aria-label="Search">🔍</button>
+          <input type="text" id="searchInput" placeholder="Search products, houses, land…" autocomplete="off"/>
+        </div>
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="openCart()" aria-label="Cart">
+          🛒<span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn" onclick="openWishlistModal()" aria-label="Wishlist" title="Wishlist">❤️</button>
+        <div class="user-menu" id="userMenuWrap">
+          <button class="auth-btn" id="authBtn" onclick="handleAuthClick()">👤 Login</button>
+          <div class="user-dropdown" id="userDropdown">
+            <div class="user-dropdown-item" onclick="openMyOrders()">📦 My Orders</div>
+            <div class="user-dropdown-item" onclick="openWishlistModal()">❤️ Wishlist</div>
+            <div class="user-dropdown-item" onclick="logoutUser()" style="color:var(--red);">🚪 Logout</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ─── Hero ────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">⭐ Accra's Trusted Shop Since 2018</div>
+        <h1>Shop <span>Quality</span><br/>Products in<br/>Accra</h1>
+        <p class="hero-sub">Electronics, Smartphones, Sports Gear, Jerseys, Bicycles, Houses & Land — all under one roof at Mamprobi Rainbow. Secure payment. Fast delivery.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">🛍️ Shop Now</a>
+          <a href="https://wa.me/233538387322" class="btn btn-whatsapp" target="_blank">💬 WhatsApp Us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-num">700+</div><div class="stat-label">Products</div></div>
+          <div class="stat-item"><div class="stat-num">5K+</div><div class="stat-label">Customers</div></div>
+          <div class="stat-item"><div class="stat-num">4.9★</div><div class="stat-label">Rating</div></div>
+          <div class="stat-item"><div class="stat-num">6yrs</div><div class="stat-label">Trusted</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">📱</div>
+          <div class="hero-card-label">Latest Arrival</div>
+          <div class="hero-card-title">iPhone 15 Pro Max</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🏠</div>
+          <div class="hero-card-label">New Listing</div>
+          <div class="hero-card-title">3 Bed House – Accra</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">⚽</div>
+          <div class="hero-card-label">30% Off</div>
+          <div class="hero-card-title">Sports Equipment</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🚴</div>
+          <div class="hero-card-label">Free Delivery</div>
+          <div class="hero-card-title">Orders above GH₵500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Trust Strip ───────────────────────────────────────────── -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><span>🚚</span> Free Delivery GH₵500+</div>
+      <div class="trust-item"><span>✅</span> 100% Genuine Products</div>
+      <div class="trust-item"><span>↩️</span> 7-Day Easy Returns</div>
+      <div class="trust-item"><span>📞</span> 24/7 WhatsApp Support</div>
+      <div class="trust-item"><span>📱</span> MTN MoMo & Telecel Accepted</div>
+      <div class="trust-item"><span>💳</span> Visa & Mastercard Accepted</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Categories ───────────────────────────────────────────── -->
+<section class="categories">
+  <div class="container">
+    <div class="section-label">Browse by Category</div>
+    <h2 class="section-title">What are you looking for?</h2>
+    <div class="cat-grid" id="catGrid">
+      <div class="cat-card active fade-in" onclick="filterByCategory('all',this)">
+        <div class="cat-icon">🏪</div><div class="cat-name">All Items</div><div class="cat-count" id="cnt-all">54 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('sports',this)">
+        <div class="cat-icon">⚽</div><div class="cat-name">Sports</div><div class="cat-count">10 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('shoes',this)">
+        <div class="cat-icon">👟</div><div class="cat-name">Shoes</div><div class="cat-count">6 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('jerseys',this)">
+        <div class="cat-icon">👕</div><div class="cat-name">Jerseys</div><div class="cat-count">7 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('electronics',this)">
+        <div class="cat-icon">🎧</div><div class="cat-name">Electronics</div><div class="cat-count">8 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('smartphones',this)">
+        <div class="cat-icon">📱</div><div class="cat-name">Phones</div><div class="cat-count">7 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('bicycles',this)">
+        <div class="cat-icon">🚴</div><div class="cat-name">Bicycles</div><div class="cat-count">4 products</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('houses',this)">
+        <div class="cat-icon">🏠</div><div class="cat-name">Houses</div><div class="cat-count">6 listings</div>
+      </div>
+      <div class="cat-card fade-in" onclick="filterByCategory('land',this)">
+        <div class="cat-icon">🌍</div><div class="cat-name">Land</div><div class="cat-count">6 listings</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Products ─────────────────────────────────────────────── -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <div class="section-label">Our Products</div>
+        <h2 class="section-title">Quality you can trust</h2>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <select id="sortSelect" style="padding:9px 14px;border:2px solid #dde3ee;border-radius:10px;font-family:var(--ff-body);font-size:.85rem;outline:none;cursor:pointer;" onchange="sortProducts()">
+          <option value="default">Sort: Default</option>
+          <option value="price-asc">Price: Low–High</option>
+          <option value="price-desc">Price: High–Low</option>
+          <option value="rating">Top Rated</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ─── Banner Strip ─────────────────────────────────────────── -->
+<div class="banner-strip">
+  <div class="container">
+    <div class="banner-inner">
+      <div>
+        <div class="banner-title">Get <span>Free Delivery</span> in Accra 🚚</div>
+        <div class="banner-sub">Order above GH₵ 500 and enjoy free delivery across Greater Accra. Fast, safe & reliable.</div>
+      </div>
+      <div class="banner-actions">
+        <a href="https://wa.me/233538387322" class="btn btn-whatsapp" target="_blank">💬 Order via WhatsApp</a>
+        <a href="#products" class="btn btn-gold">🛍️ Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Features / Trust Pillars ─────────────────────────────── -->
+<section class="features" id="features">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0;">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Shop with confidence</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-title">Fast Delivery</div>
+        <div class="feature-desc">Same-day delivery across Accra. We dispatch orders within 2 hours of payment confirmation. Tracked every step.</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">Secure Payment</div>
+        <div class="feature-desc">Pay safely with MTN Mobile Money, Telecel Cash, Mastercard, or Visa. All transactions are encrypted.</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✅</div>
+        <div class="feature-title">Genuine Products</div>
+        <div class="feature-desc">Every item we sell is 100% authentic and quality-checked before shipping. No counterfeits — ever.</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">↩️</div>
+        <div class="feature-title">Easy Returns</div>
+        <div class="feature-desc">Not satisfied? Return within 7 days for a full refund or exchange. No questions asked.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Delivery Section ──────────────────────────────────────── -->
+<section class="delivery" id="delivery">
+  <div class="container">
+    <div class="delivery-inner">
+      <div>
+        <div class="section-label">Delivery Info</div>
+        <h2 class="section-title">How delivery works</h2>
+        <p style="color:var(--muted);margin:16px 0 36px;line-height:1.7;">We make it easy to get your products fast. Follow these simple steps and your order will arrive at your doorstep in no time.</p>
+        <div class="delivery-steps">
+          <div class="d-step fade-in">
+            <div class="d-step-num">1</div>
+            <div class="d-step-body">
+              <h4>Place Your Order</h4>
+              <p>Add items to your cart and checkout, or message us on WhatsApp with your order list.</p>
+            </div>
+          </div>
+          <div class="d-step fade-in">
+            <div class="d-step-num">2</div>
+            <div class="d-step-body">
+              <h4>Make Payment</h4>
+              <p>Pay securely via MTN MoMo, Telecel Cash, Mastercard, or Visa. You get confirmation instantly.</p>
+            </div>
+          </div>
+          <div class="d-step fade-in">
+            <div class="d-step-num">3</div>
+            <div class="d-step-body">
+              <h4>We Pack & Dispatch</h4>
+              <p>Your order is carefully packed and handed to our delivery team within 2 hours of payment.</p>
+            </div>
+          </div>
+          <div class="d-step fade-in">
+            <div class="d-step-num">4</div>
+            <div class="d-step-body">
+              <h4>Delivered to You</h4>
+              <p>Our rider delivers to your address. Same-day delivery available within Accra Metro Area.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="delivery-areas fade-in">
+        <h3>📍 Delivery Areas in Accra</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">We deliver to all major areas. Free delivery on orders above GH₵ 500.</p>
+        <div>
+          <div class="area-tag featured">Mamprobi</div>
+          <div class="area-tag featured">Korle Bu</div>
+          <div class="area-tag">Accra Central</div>
+          <div class="area-tag">Dansoman</div>
+          <div class="area-tag">Kaneshie</div>
+          <div class="area-tag">Labadi</div>
+          <div class="area-tag">Tema</div>
+          <div class="area-tag">Spintex</div>
+          <div class="area-tag">East Legon</div>
+          <div class="area-tag">Achimota</div>
+          <div class="area-tag">Lapaz</div>
+          <div class="area-tag">Madina</div>
+          <div class="area-tag">Adenta</div>
+          <div class="area-tag">Kasoa</div>
+          <div class="area-tag">Osu</div>
+          <div class="area-tag">Airport Residential</div>
+          <div class="area-tag">Haatso</div>
+          <div class="area-tag">Teshie</div>
+          <div class="area-tag">Nungua</div>
+          <div class="area-tag">Pokuase</div>
+        </div>
+        <!-- GPS Location Detector -->
+        <button class="gps-btn" id="gpsBtn" onclick="detectLocation()">
+          <span style="font-size:1.3rem;">📡</span>
+          <div style="text-align:left;">
+            <div style="font-size:.85rem;font-weight:700;">Detect My Location</div>
+            <div style="font-size:.75rem;opacity:.75;">Auto-fill my delivery address</div>
+          </div>
+        </button>
+        <div class="location-result" id="locationResult">
+          <strong>📍 Location detected:</strong>
+          <div id="locationText" style="margin-top:4px;color:var(--blue);font-weight:600;"></div>
+          <div id="locationCoords" style="font-size:.75rem;color:var(--muted);margin-top:2px;"></div>
+        </div>
+        <div style="margin-top:20px;padding:16px;background:#e8f4ff;border-radius:12px;font-size:.85rem;">
+          <strong style="color:var(--blue);">📞 Delivery Enquiries:</strong><br/>
+          Call or WhatsApp: <strong>+233 53 838 7322</strong><br/>
+          Same-day delivery cutoff: <strong>5:00 PM</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Testimonials ──────────────────────────────────────────── -->
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What our customers say</h2>
+    </div>
+    <div class="testimonials-grid" style="margin-top:48px;">
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Godfred Super Shop is the best! I bought a Samsung Galaxy A55 and it arrived the same day. The phone is 100% genuine. Very happy with the service!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">KA</div><div><div class="reviewer-name">Kwame Asante</div><div class="reviewer-loc">📍 Accra Central</div></div></div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I ordered Nike Air Max and football boots for my son. The quality is amazing and the delivery was super fast. I will always shop here!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">AB</div><div><div class="reviewer-name">Abena Boateng</div><div class="reviewer-loc">📍 Dansoman</div></div></div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"MTN MoMo payment was so easy! I sent the money and got a confirmation within minutes. My Ghana Black Stars jersey arrived perfectly. Excellent shop!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">YO</div><div><div class="reviewer-name">Yaw Osei</div><div class="reviewer-loc">📍 Kaneshie</div></div></div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Bought a mountain bicycle here. Great price compared to other shops. Delivery was on time. The WhatsApp ordering is very convenient. Highly recommend!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">EK</div><div><div class="reviewer-name">Efua Koomson</div><div class="reviewer-loc">📍 Madina</div></div></div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was looking for land in Accra and found exactly what I needed on Godfred Super Shop. The listing was accurate and the owner was helpful. Thank you!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">KD</div><div><div class="reviewer-name">Kofi Darko</div><div class="reviewer-loc">📍 Tema</div></div></div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Bought a Smart Watch and Wireless Earbuds. Both genuine! Packed very well. Free delivery because my order was over GH₵500. Will shop again!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">AA</div><div><div class="reviewer-name">Akosua Agyeman</div><div class="reviewer-loc">📍 East Legon</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── About Section ────────────────────────────────────────── -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual fade-in-left">
+        <div class="about-main-card">
+          <div class="about-tag">Est. 2018 · Mamprobi, Accra</div>
+          <h2>Godfred Super Shop</h2>
+          <p>Your number one destination for quality electronics, sports gear, smartphones, shoes, jerseys, bicycles, houses and land in Accra. Serving the community for over 6 years with genuine products and honest prices.</p>
+          <div class="about-stats-row">
+            <div class="about-stat"><div class="about-stat-num">700+</div><div class="about-stat-label">Products</div></div>
+            <div class="about-stat"><div class="about-stat-num">5K+</div><div class="about-stat-label">Customers</div></div>
+            <div class="about-stat"><div class="about-stat-num">4.9★</div><div class="about-stat-label">Avg Rating</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text fade-in-right">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Accra's Most<br/>Trusted Shop</h2>
+        <p>Godfred Super Shop was founded in 2018 with a simple mission: <strong>bring quality products to every Ghanaian at fair prices.</strong> Located at Mamprobi Rainbow in Accra, we've grown from a small sports equipment store to a full-service shop offering electronics, smartphones, bicycles, shoes, jerseys, houses, land and more.</p>
+        <p>We work directly with trusted suppliers and manufacturers to ensure every product you buy from us is <strong>100% genuine and value for money.</strong> Our team is passionate about customer satisfaction — we're not happy until you are.</p>
+        <ul class="about-list">
+          <li>Over 700 quality products across 9 categories</li>
+          <li>Serving 5,000+ happy customers since 2018</li>
+          <li>Secure mobile money & card payments accepted</li>
+          <li>Fast, reliable delivery across Greater Accra</li>
+          <li>7-day return and exchange policy</li>
+          <li>Houses and land listings for sale in Accra</li>
+          <li>Friendly, knowledgeable staff always ready to help</li>
+        </ul>
+        <!-- Mission, Vision, Values -->
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <h4>🎯 Our Mission</h4>
+            <p>To make quality products accessible to every Ghanaian at fair prices with outstanding service.</p>
+          </div>
+          <div class="mvv-card" style="border-left-color:var(--gold);">
+            <h4>👁️ Our Vision</h4>
+            <p>To become Ghana's most trusted multi-category shop both online and in-store by 2030.</p>
+          </div>
+          <div class="mvv-card" style="border-left-color:var(--green);">
+            <h4>💚 Our Values</h4>
+            <p>Honesty, quality, speed, and putting our customers first — always.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;">
+          <a href="https://wa.me/233538387322" class="btn btn-whatsapp" target="_blank">💬 Chat with Us</a>
+          <a href="#products" class="btn btn-primary">🛍️ Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Team ──────────────────────────────────────────────────── -->
+<section class="team">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">The people behind Godfred Super Shop</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar">👨‍💼</div>
+        <div class="team-name">Godfred Asante</div>
+        <div class="team-role">Founder & CEO</div>
+        <div class="team-bio">Founded Godfred Super Shop in 2018. Passionate about making quality products accessible to all Ghanaians. 10+ years in retail.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">👩‍💻</div>
+        <div class="team-name">Ama Owusu</div>
+        <div class="team-role">Customer Service Manager</div>
+        <div class="team-bio">Ensures every customer leaves satisfied. Manages WhatsApp orders and resolves complaints quickly and professionally.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">🚴</div>
+        <div class="team-name">Kweku Mensah</div>
+        <div class="team-role">Head of Delivery</div>
+        <div class="team-bio">Coordinates all deliveries across Greater Accra. Ensures your orders arrive on time, every time.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">🏠</div>
+        <div class="team-name">Efua Darko</div>
+        <div class="team-role">Real Estate Agent</div>
+        <div class="team-bio">Handles all house and land listings. Helps clients find their dream property in Accra and surrounding areas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact Section ───────────────────────────────────────── -->
+<section class="contact-section" id="contact-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <p style="color:var(--muted);margin-top:10px;">We're always here to help. Reach out via any of the channels below.</p>
+    </div>
+    <div class="contact-inner">
+      <!-- Contact Info + Social Channels -->
+      <div>
+        <div class="contact-card" style="margin-bottom:24px;">
+          <h3>📞 Direct Contact</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text"><strong>Our Location</strong><span>Mamprobi Rainbow, Accra, Ghana</span></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text"><strong>Phone / WhatsApp</strong><span><a href="tel:+233538387322">+233 53 838 7322</a></span></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text"><strong>Email</strong><span><a href="mailto:godfredsupershop@gmail.com">godfredsupershop@gmail.com</a></span></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text"><strong>Business Hours</strong><span>Monday – Saturday: 8:00 AM – 8:00 PM</span></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>💬 Chat & Follow Us</h3>
+          <a href="https://wa.me/233538387322" class="social-channel whatsapp" target="_blank">
+            <div class="social-channel-icon">💬</div>
+            <div class="social-channel-info"><strong>WhatsApp</strong><span>Chat with us instantly</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+          <a href="https://facebook.com/godfredsupershop" class="social-channel facebook" target="_blank">
+            <div class="social-channel-icon">📘</div>
+            <div class="social-channel-info"><strong>Facebook</strong><span>@godfredsupershop</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+          <a href="https://instagram.com/godfredsupershop" class="social-channel instagram" target="_blank">
+            <div class="social-channel-icon">📸</div>
+            <div class="social-channel-info"><strong>Instagram</strong><span>@godfredsupershop</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+          <a href="https://tiktok.com/@godfredsupershop" class="social-channel tiktok" target="_blank">
+            <div class="social-channel-icon">🎵</div>
+            <div class="social-channel-info"><strong>TikTok</strong><span>@godfredsupershop</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+          <a href="https://youtube.com/@godfredsupershop" class="social-channel youtube" target="_blank">
+            <div class="social-channel-icon">▶️</div>
+            <div class="social-channel-info"><strong>YouTube</strong><span>@godfredsupershop</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+          <a href="tel:+233538387322" class="social-channel call">
+            <div class="social-channel-icon">📞</div>
+            <div class="social-channel-info"><strong>Call Us</strong><span>+233 53 838 7322</span></div>
+            <div class="social-channel-arrow">→</div>
+          </a>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="contact-card">
+        <h3>✉️ Send Us a Message</h3>
+        <div class="contact-form-group">
+          <label class="contact-form-label">Your Full Name *</label>
+          <input type="text" id="contactName" class="contact-form-input" placeholder="e.g. Kwame Asante"/>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="contact-form-group">
+            <label class="contact-form-label">Phone Number *</label>
+            <input type="tel" id="contactPhone" class="contact-form-input" placeholder="+233 XX XXX XXXX"/>
+          </div>
+          <div class="contact-form-group">
+            <label class="contact-form-label">Email Address</label>
+            <input type="email" id="contactEmail" class="contact-form-input" placeholder="you@email.com"/>
+          </div>
+        </div>
+        <div class="contact-form-group">
+          <label class="contact-form-label">Subject *</label>
+          <select id="contactSubject" class="contact-form-input">
+            <option value="">Select a subject...</option>
+            <option>Product Enquiry</option>
+            <option>Order Status</option>
+            <option>Delivery Issue</option>
+            <option>Return / Refund</option>
+            <option>Payment Issue</option>
+            <option>House / Land Enquiry</option>
+            <option>Partnership / Wholesale</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="contact-form-group">
+          <label class="contact-form-label">Your Message *</label>
+          <textarea id="contactMessage" class="contact-form-input contact-form-textarea" placeholder="Tell us how we can help you…"></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="sendContactForm()">
+          📤 Send Message
+        </button>
+        <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px;">We typically reply within 1–2 hours via WhatsApp or Email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Social / App Links ────────────────────────────────────── -->
+<section class="app-links">
+  <div class="container">
+    <div class="app-links-inner">
+      <h2>Follow Us & Stay Connected</h2>
+      <p>Find us on social media for the latest deals, new arrivals, and giveaways. Join our growing community!</p>
+      <div class="social-apps">
+        <a href="https://facebook.com/godfredsupershop" class="app-card facebook" target="_blank">
+          <div class="app-card-icon">📘</div>
+          <div><span class="app-card-label">Find us on</span><span class="app-card-name">Facebook</span></div>
+        </a>
+        <a href="https://tiktok.com/@godfredsupershop" class="app-card tiktok" target="_blank">
+          <div class="app-card-icon">🎵</div>
+          <div><span class="app-card-label">Watch us on</span><span class="app-card-name">TikTok</span></div>
+        </a>
+        <a href="https://instagram.com/godfredsupershop" class="app-card instagram" target="_blank">
+          <div class="app-card-icon">📸</div>
+          <div><span class="app-card-label">Follow us on</span><span class="app-card-name">Instagram</span></div>
+        </a>
+        <a href="https://wa.me/233538387322" class="app-card whatsapp" target="_blank">
+          <div class="app-card-icon">💬</div>
+          <div><span class="app-card-label">Chat with us</span><span class="app-card-name">WhatsApp</span></div>
+        </a>
+        <a href="https://youtube.com/@godfredsupershop" class="app-card youtube" target="_blank">
+          <div class="app-card-icon">▶️</div>
+          <div><span class="app-card-label">Watch on</span><span class="app-card-name">YouTube</span></div>
+        </a>
+        <a href="tel:+233538387322" class="app-card call">
+          <div class="app-card-icon">📞</div>
+          <div><span class="app-card-label">Call us on</span><span class="app-card-name">+233 53 838 7322</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ───────────────────────────────────────────────── -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🏪</div>
+          Godfred <span style="color:var(--blue)">Super Shop</span>
+        </div>
+        <p>Your trusted shop in Mamprobi Rainbow, Accra. Quality products, genuine goods, houses, land and fast delivery across Greater Accra since 2018.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/godfredsupershop" class="social-link" title="Facebook">📘</a>
+          <a href="https://tiktok.com/@godfredsupershop" class="social-link" title="TikTok">🎵</a>
+          <a href="https://instagram.com/godfredsupershop" class="social-link" title="Instagram">📸</a>
+          <a href="https://wa.me/233538387322" class="social-link" title="WhatsApp">💬</a>
+          <a href="https://youtube.com/@godfredsupershop" class="social-link" title="YouTube">▶️</a>
+        </div>
+        <div class="pay-badges" style="margin-top:16px;">
+          <span class="pay-badge">📱 MTN MoMo</span>
+          <span class="pay-badge">📱 Telecel</span>
+          <span class="pay-badge">💳 Mastercard</span>
+          <span class="pay-badge">💳 Visa</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#delivery">Delivery Info</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+          <li><a href="#" onclick="openAuth();return false;">Login / Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#products">📱 Smartphones</a></li>
+          <li><a href="#products">🎧 Electronics</a></li>
+          <li><a href="#products">⚽ Sports Gear</a></li>
+          <li><a href="#products">👟 Shoes</a></li>
+          <li><a href="#products">👕 Jerseys</a></li>
+          <li><a href="#products">🚴 Bicycles</a></li>
+          <li><a href="#products">🏠 Houses</a></li>
+          <li><a href="#products">🌍 Land</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item"><span class="contact-icon">📍</span><span>Mamprobi Rainbow, Accra, Ghana</span></div>
+        <div class="contact-item"><span class="contact-icon">📞</span><span><a href="tel:+233538387322" style="color:rgba(255,255,255,.75)">+233 53 838 7322</a></span></div>
+        <div class="contact-item"><span class="contact-icon">✉️</span><span><a href="mailto:godfredsupershop@gmail.com" style="color:rgba(255,255,255,.75)">godfredsupershop@gmail.com</a></span></div>
+        <div class="contact-item"><span class="contact-icon">🕐</span><span>Mon–Sat: 8am – 8pm</span></div>
+        <a href="https://wa.me/233538387322" class="btn btn-whatsapp" style="margin-top:12px;padding:11px 20px;font-size:.85rem;" target="_blank">💬 WhatsApp Order</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Godfred Super Shop. All rights reserved.</span>
+      <span>Made with ❤️ in Accra, Ghana 🇬🇭</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Floating WhatsApp Button ──────────────────────────────── -->
+<a href="https://wa.me/233538387322" class="fab-whatsapp" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<!-- ─── Cart Drawer ───────────────────────────────────────────── -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="close-cart" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Your cart is empty.<br/>Start shopping!</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">GH₵ 0.00</span>
+    </div>
+    <div class="checkout-btn-row">
+      <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="openCheckout()">💳 Checkout</button>
+      <a id="whatsappCheckout" href="#" class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank">💬 Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Checkout Modal ────────────────────────────────────────── -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>💳 Checkout</h2>
+      <button class="modal-close" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="order-summary" id="checkoutSummary"></div>
+
+      <!-- Delivery Details -->
+      <div style="margin-bottom:20px;">
+        <div style="font-family:var(--ff-head);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:14px;">📦 Delivery Details</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" id="co-fname" class="form-input" placeholder="Godfred"/>
+            <div class="field-error" id="err-fname">Please enter your first name.</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" id="co-lname" class="form-input" placeholder="Asante"/>
+            <div class="field-error" id="err-lname">Please enter your last name.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number * (for delivery calls)</label>
+          <input type="tel" id="co-phone" class="form-input" placeholder="+233 XX XXX XXXX"/>
+          <div class="field-error" id="err-phone">Please enter a valid Ghana phone number.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Delivery Address *</label>
+          <input type="text" id="co-address" class="form-input" placeholder="Area, Street, Landmark"/>
+          <div class="field-error" id="err-address">Please enter your delivery address.</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input type="text" id="co-city" class="form-input" value="Accra"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Region</label>
+            <select id="co-region" class="form-input">
+              <option>Greater Accra</option>
+              <option>Ashanti</option>
+              <option>Western</option>
+              <option>Central</option>
+              <option>Eastern</option>
+              <option>Volta</option>
+              <option>Northern</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Delivery Notes (optional)</label>
+          <input type="text" id="co-notes" class="form-input" placeholder="e.g. Call when you arrive, Blue gate"/>
+        </div>
+        <!-- GPS in checkout -->
+        <button type="button" class="gps-btn" style="margin-top:4px;" onclick="detectLocationCheckout()">
+          <span style="font-size:1.2rem;">📡</span>
+          <div style="text-align:left;"><div style="font-size:.82rem;font-weight:700;">Use My GPS Location</div><div style="font-size:.72rem;opacity:.75;">Auto-fill delivery address</div></div>
+        </button>
+      </div>
+
+      <!-- Payment Method -->
+      <div>
+        <div style="font-family:var(--ff-head);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:14px;">💳 Payment Method</div>
+        <div class="pay-tabs">
+          <div class="pay-tab active" onclick="selectPayTab('mtn',this)"><span class="pay-tab-icon">📱</span>MTN MoMo</div>
+          <div class="pay-tab" onclick="selectPayTab('telecel',this)"><span class="pay-tab-icon">📲</span>Telecel Cash</div>
+          <div class="pay-tab" onclick="selectPayTab('card',this)"><span class="pay-tab-icon">💳</span>Card</div>
+          <div class="pay-tab" onclick="selectPayTab('whatsapp',this)"><span class="pay-tab-icon">💬</span>WhatsApp</div>
+        </div>
+
+        <!-- MTN MoMo -->
+        <div class="pay-panel active" id="panel-mtn">
+          <div style="background:#fff9e6;border:2px solid #f5a623;border-radius:12px;padding:20px;">
+            <div style="text-align:center;margin-bottom:14px;">
+              <div style="font-size:2rem;">📱</div>
+              <div style="font-family:var(--ff-head);font-weight:800;color:#c77c00;margin-bottom:4px;">MTN Mobile Money</div>
+              <div style="font-size:.82rem;color:var(--muted);">Send payment to this number, then enter your transaction ID below.</div>
+            </div>
+            <div style="background:#fff;border-radius:10px;padding:16px;margin-bottom:16px;text-align:center;border:2px dashed #f5a623;">
+              <div style="font-size:.78rem;color:var(--muted);">MTN MoMo Number</div>
+              <div style="font-family:var(--ff-head);font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:3px;">0538 387 322</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Account Name: <strong style="color:var(--navy);">GODFRED ASANTE</strong></div>
+              <button onclick="copyToClipboard('0538387322')" style="margin-top:8px;background:var(--gold);border:none;border-radius:8px;padding:6px 16px;font-size:.8rem;font-weight:600;cursor:pointer;">📋 Copy Number</button>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your MTN Number (used to send)</label>
+              <input type="tel" id="mtn-sender" class="form-input" placeholder="e.g. 024 XXX XXXX"/>
+              <div class="field-error" id="err-mtn-sender">Please enter your MTN number.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Transaction ID * (from your MoMo receipt)</label>
+              <input type="text" id="mtn-txid" class="form-input" placeholder="e.g. GHR2025XXXXXXXX" style="text-transform:uppercase;"/>
+              <div class="field-error" id="err-mtn-txid">Please enter the transaction ID from your MoMo receipt.</div>
+            </div>
+            <div style="background:#fff8e1;border-radius:8px;padding:10px;font-size:.8rem;color:#7a5800;">
+              ⚠️ <strong>How to pay:</strong> Dial *170# → My Wallet → Send Money → Enter 0538387322 → Enter amount → Confirm with PIN → Copy the reference/ID shown.
+            </div>
+          </div>
+        </div>
+
+        <!-- Telecel Cash -->
+        <div class="pay-panel" id="panel-telecel">
+          <div style="background:#f0f7ff;border:2px solid #1a6ef5;border-radius:12px;padding:20px;">
+            <div style="text-align:center;margin-bottom:14px;">
+              <div style="font-size:2rem;">📲</div>
+              <div style="font-family:var(--ff-head);font-weight:800;color:var(--blue);margin-bottom:4px;">Telecel Cash</div>
+              <div style="font-size:.82rem;color:var(--muted);">Send payment to this number, then enter your transaction ID below.</div>
+            </div>
+            <div style="background:#fff;border-radius:10px;padding:16px;margin-bottom:16px;text-align:center;border:2px dashed #1a6ef5;">
+              <div style="font-size:.78rem;color:var(--muted);">Telecel Number</div>
+              <div style="font-family:var(--ff-head);font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:3px;">0538 387 322</div>
+              <div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Account Name: <strong style="color:var(--navy);">GODFRED ASANTE</strong></div>
+              <button onclick="copyToClipboard('0538387322')" style="margin-top:8px;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:6px 16px;font-size:.8rem;font-weight:600;cursor:pointer;">📋 Copy Number</button>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Telecel Number</label>
+              <input type="tel" id="tcl-sender" class="form-input" placeholder="e.g. 050 XXX XXXX"/>
+              <div class="field-error" id="err-tcl-sender">Please enter your Telecel number.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Transaction ID * (from your receipt)</label>
+              <input type="text" id="tcl-txid" class="form-input" placeholder="e.g. TLC2025XXXXXXXX" style="text-transform:uppercase;"/>
+              <div class="field-error" id="err-tcl-txid">Please enter the transaction ID from your Telecel receipt.</div>
+            </div>
+            <div style="background:#e8f4ff;border-radius:8px;padding:10px;font-size:.8rem;color:#0a3260;">
+              ℹ️ <strong>How to pay:</strong> Dial *110# → Send Money → Enter 0538387322 → Enter amount → Confirm → Copy the transaction reference shown.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="pay-panel" id="panel-card">
+          <div style="background:#f8fffe;border:2px solid #00b341;border-radius:12px;padding:20px;">
+            <div style="text-align:center;margin-bottom:16px;">
+              <div style="font-size:2rem;">💳</div>
+              <div style="font-family:var(--ff-head);font-weight:800;color:var(--navy);margin-bottom:4px;">Pay by Card</div>
+              <div style="font-size:.82rem;color:var(--muted);">Visa & Mastercard accepted. Secured with 256-bit SSL.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Card Number *</label>
+              <input type="text" id="card-num" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this)"/>
+              <div class="card-icons"><span class="card-icon">💳 Visa</span><span class="card-icon">💳 Mastercard</span></div>
+              <div class="field-error" id="err-card-num">Please enter a valid 16-digit card number.</div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Expiry Date *</label>
+                <input type="text" id="card-exp" class="form-input" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)"/>
+                <div class="field-error" id="err-card-exp">Please enter a valid expiry date.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV *</label>
+                <input type="password" id="card-cvv" class="form-input" placeholder="•••" maxlength="4" autocomplete="off"/>
+                <div class="field-error" id="err-card-cvv">Please enter a valid CVV.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cardholder Name *</label>
+              <input type="text" id="card-name" class="form-input" placeholder="GODFRED ASANTE" style="text-transform:uppercase;"/>
+              <div class="field-error" id="err-card-name">Please enter the cardholder name.</div>
+            </div>
+            <div style="background:#f0fff4;border:2px solid #00b341;border-radius:10px;padding:14px;font-size:.82rem;display:flex;gap:10px;align-items:center;margin-top:4px;">
+              <span style="font-size:1.4rem;">🔒</span>
+              <div><strong style="color:#007a25;">256-bit SSL Encrypted</strong><br/><span style="color:var(--muted);">Your card details are never stored on our servers. Powered by Paystack/Flutterwave.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="pay-panel" id="panel-whatsapp">
+          <div style="background:#f0fff4;border:2px solid #25D366;border-radius:12px;padding:24px;text-align:center;">
+            <div style="font-size:3rem;margin-bottom:12px;">💬</div>
+            <div style="font-family:var(--ff-head);font-weight:800;color:#1a7a3a;margin-bottom:8px;">Order via WhatsApp</div>
+            <div style="font-size:.9rem;color:var(--muted);margin-bottom:20px;">We'll send your order summary and payment instructions directly on WhatsApp. Fastest way to order!</div>
+            <a id="whatsappCheckout2" href="#" class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank">📲 Send Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Place Order Button -->
+      <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;padding:16px;font-size:1rem;" id="placeOrderBtn" onclick="placeOrder()">
+        ✅ Confirm & Place Order
+      </button>
+      <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px;">By placing this order you agree to our <a href="#" style="color:var(--blue);">Terms</a> and <a href="#" style="color:var(--blue);">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Order Success Modal ───────────────────────────────────── -->
+<div class="modal-overlay" id="orderSuccessModal">
+  <div class="modal" style="max-width:400px;text-align:center;">
+    <div class="modal-body" style="padding:40px 28px;">
+      <div style="font-size:4rem;animation:floatCard 2s ease-in-out infinite;margin-bottom:16px;">🎉</div>
+      <h2 style="font-family:var(--ff-head);font-weight:800;font-size:1.5rem;color:var(--navy);margin-bottom:12px;">Order Placed!</h2>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:20px;">Thank you for your order! We will confirm your order and delivery details via <strong>WhatsApp</strong> shortly.</p>
+      <div id="orderRef" style="background:var(--off);border-radius:12px;padding:14px;margin-bottom:20px;font-family:var(--ff-head);font-weight:700;color:var(--blue);font-size:.9rem;"></div>
+      <a id="orderWhatsappLink" href="#" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-bottom:12px;" target="_blank">💬 Track via WhatsApp</a>
+      <button onclick="closeOrderSuccess()" class="btn btn-outline" style="width:100%;justify-content:center;">🛍️ Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Auth Modal ────────────────────────────────────────────── -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="authTitle">👤 My Account</h2>
+      <button class="modal-close" onclick="closeAuth()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" onclick="switchAuth('login',this)">Login</button>
+        <button class="auth-tab" id="tabRegister" onclick="switchAuth('register',this)">Create Account</button>
+      </div>
+
+      <!-- Login Panel -->
+      <div class="auth-panel active" id="auth-login">
+        <div class="form-group">
+          <label class="form-label">Email or Phone *</label>
+          <input type="text" id="login-id" class="form-input" placeholder="email@example.com or 024XXXXXXX"/>
+          <div class="field-error" id="err-login-id">Please enter your email or phone number.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password *</label>
+          <div style="position:relative;">
+            <input type="password" id="login-pw" class="form-input" placeholder="Your password" style="padding-right:44px;"/>
+            <button type="button" onclick="togglePwVisibility('login-pw',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;font-size:1rem;color:var(--muted);">👁️</button>
+          </div>
+          <div class="field-error" id="err-login-pw">Incorrect password. Please try again.</div>
+        </div>
+        <div style="text-align:right;margin-bottom:16px;"><a href="#" onclick="showForgotPassword();return false;" style="font-size:.82rem;color:var(--blue);font-weight:600;">Forgot password?</a></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="loginUser()">🔓 Login to Account</button>
+        <div class="divider">or continue with</div>
+        <div class="social-login">
+          <button class="social-login-btn" onclick="socialLogin('Facebook')"><span style="font-size:1.2rem;">📘</span> Continue with Facebook</button>
+          <button class="social-login-btn" onclick="socialLogin('Google')"><span style="font-size:1.4rem;">🔍</span> Continue with Google</button>
+        </div>
+        <div class="auth-footer">Don't have an account? <a href="#" onclick="switchAuth('register',document.getElementById('tabRegister'));return false;">Create one</a></div>
+      </div>
+
+      <!-- Register Panel -->
+      <div class="auth-panel" id="auth-register">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" id="reg-fname" class="form-input" placeholder="Godfred"/>
+            <div class="field-error" id="err-reg-fname">Please enter your first name.</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" id="reg-lname" class="form-input" placeholder="Asante"/>
+            <div class="field-error" id="err-reg-lname">Please enter your last name.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="you@example.com"/>
+          <div class="field-error" id="err-reg-email">Please enter a valid email address.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" id="reg-phone" class="form-input" placeholder="+233 XX XXX XXXX"/>
+          <div class="field-error" id="err-reg-phone">Please enter a valid Ghana phone number.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password * (min. 8 characters)</label>
+          <div style="position:relative;">
+            <input type="password" id="reg-pw" class="form-input" placeholder="Create a strong password" oninput="checkPasswordStrength(this.value)" style="padding-right:44px;"/>
+            <button type="button" onclick="togglePwVisibility('reg-pw',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;font-size:1rem;color:var(--muted);">👁️</button>
+          </div>
+          <div class="pw-strength"><div class="pw-strength-bar" id="pwBar"></div></div>
+          <div class="pw-hint" id="pwHint">Enter a password</div>
+          <div class="field-error" id="err-reg-pw">Password must be at least 8 characters.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Confirm Password *</label>
+          <input type="password" id="reg-pw2" class="form-input" placeholder="Repeat your password"/>
+          <div class="field-error" id="err-reg-pw2">Passwords do not match.</div>
+        </div>
+        <div style="margin-bottom:16px;font-size:.82rem;color:var(--muted);">By creating an account you agree to our <a href="#" style="color:var(--blue);">Terms of Service</a> and <a href="#" style="color:var(--blue);">Privacy Policy</a>.</div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="registerUser()">🎉 Create My Account</button>
+        <div class="auth-footer">Already have an account? <a href="#" onclick="switchAuth('login',document.getElementById('tabLogin'));return false;">Login</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Wishlist Modal ─────────────────────────────────────────── -->
+<div class="modal-overlay" id="wishlistModal">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-header">
+      <h2>❤️ My Wishlist</h2>
+      <button class="modal-close" onclick="closeWishlistModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="wishlistItems"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── My Orders Modal ───────────────────────────────────────── -->
+<div class="modal-overlay" id="ordersModal">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <h2>📦 My Orders</h2>
+      <button class="modal-close" onclick="document.getElementById('ordersModal').classList.remove('open')">✕</button>
+    </div>
+    <div class="modal-body" id="ordersBody"></div>
+  </div>
+</div>
+
+<!-- ─── Toast ─────────────────────────────────────────────────── -->
+<div id="toast"></div>
+
+<!-- ─── Scripts ───────────────────────────────────────────────── -->
+<script>
+/* ──────────────────────────────────────────────────────────────
+   PRODUCTS DATA
+──────────────────────────────────────────────────────────────── */
+const PRODUCTS = [
+  // ── Sports ──
+  {id:1,  name:"Football (Size 5)",      category:"sports",     price:120,  oldPrice:null, icon:"⚽", desc:"Official size 5. Durable PU leather, all-weather.",           rating:4.8, reviews:54,  badge:null},
+  {id:2,  name:"Basketball",             category:"sports",     price:180,  oldPrice:220,  icon:"🏀", desc:"Indoor/outdoor. Deep channel design for grip.",               rating:4.7, reviews:31,  badge:"sale"},
+  {id:3,  name:"Tennis Racket Set",      category:"sports",     price:210,  oldPrice:null, icon:"🎾", desc:"Lightweight aluminium frame. Strung. With cover.",            rating:4.6, reviews:22,  badge:"new"},
+  {id:4,  name:"Boxing Gloves Pro",      category:"sports",     price:260,  oldPrice:300,  icon:"🥊", desc:"Pro-grade padded gloves. Pair. 12oz. Genuine leather.",        rating:4.7, reviews:18,  badge:"sale"},
+  {id:5,  name:"Volleyball",             category:"sports",     price:150,  oldPrice:null, icon:"🏐", desc:"Official size & weight. Smooth PU cover.",                   rating:4.5, reviews:14,  badge:null},
+  {id:6,  name:"Table Tennis Set",       category:"sports",     price:95,   oldPrice:null, icon:"🏓", desc:"2 bats + 6 balls + net. Great for home play.",               rating:4.4, reviews:9,   badge:null},
+  {id:7,  name:"Speed Skipping Rope",    category:"sports",     price:45,   oldPrice:null, icon:"🪢", desc:"Speed jump rope. Adjustable. Steel ball bearings.",           rating:4.3, reviews:27,  badge:null},
+  {id:8,  name:"Rugby Ball",             category:"sports",     price:130,  oldPrice:null, icon:"🏉", desc:"Composite leather. Size 5. Match quality.",                   rating:4.5, reviews:7,   badge:"new"},
+  {id:9,  name:"Swimming Goggles",       category:"sports",     price:85,   oldPrice:110,  icon:"🥽", desc:"Anti-fog UV protection. Adjustable strap. Adults & kids.",    rating:4.6, reviews:16,  badge:"sale"},
+  {id:10, name:"Gym Dumbbell Set 20kg",  category:"sports",     price:320,  oldPrice:380,  icon:"🏋️", desc:"Adjustable rubber dumbbell set. 20kg. Home workout.",          rating:4.7, reviews:23,  badge:"sale"},
+  // ── Shoes ──
+  {id:11, name:"Nike Air Max 2024",      category:"shoes",      price:650,  oldPrice:800,  icon:"👟", desc:"Lightweight cushion. Sizes 38–46. Black/White available.",    rating:4.9, reviews:88,  badge:"sale"},
+  {id:12, name:"Adidas Running Shoes",   category:"shoes",      price:520,  oldPrice:null, icon:"👟", desc:"Responsive foam sole. Breathable mesh upper.",               rating:4.7, reviews:62,  badge:null},
+  {id:13, name:"Football Boots FG",      category:"shoes",      price:380,  oldPrice:450,  icon:"👞", desc:"FG studs. Sizes 39–45. Multiple colours.",                   rating:4.6, reviews:33,  badge:"sale"},
+  {id:14, name:"Jordan 1 Retro",         category:"shoes",      price:780,  oldPrice:null, icon:"🥿", desc:"Iconic design. Full leather upper. Sizes 38–46.",            rating:4.8, reviews:44,  badge:"hot"},
+  {id:15, name:"Sandals / Slippers",     category:"shoes",      price:75,   oldPrice:null, icon:"🩴", desc:"Comfortable daily-wear. Sizes 36–45. Various colours.",      rating:4.3, reviews:19,  badge:null},
+  {id:16, name:"Puma Training Shoes",    category:"shoes",      price:440,  oldPrice:500,  icon:"👟", desc:"Comfortable training shoe. Sizes 38–45. 3 colour options.",  rating:4.5, reviews:29,  badge:"sale"},
+  // ── Jerseys ──
+  {id:17, name:"Ghana Black Stars Kit",  category:"jerseys",    price:180,  oldPrice:null, icon:"👕", desc:"Official-style Ghana jersey 2024. S–XXL.",                   rating:4.9, reviews:77,  badge:"hot"},
+  {id:18, name:"Real Madrid Jersey",     category:"jerseys",    price:200,  oldPrice:240,  icon:"👕", desc:"2024/25 Home kit. Player grade. S–XXL.",                     rating:4.8, reviews:91,  badge:"sale"},
+  {id:19, name:"Barcelona Jersey",       category:"jerseys",    price:200,  oldPrice:null, icon:"👕", desc:"2024/25 Home kit. Dri-Fit fabric. S–XXL.",                   rating:4.7, reviews:68,  badge:null},
+  {id:20, name:"PSG Jersey",             category:"jerseys",    price:190,  oldPrice:220,  icon:"👕", desc:"2024/25 Away kit. Breathable polyester. S–XXL.",              rating:4.6, reviews:42,  badge:"sale"},
+  {id:21, name:"Man Utd Jersey",         category:"jerseys",    price:190,  oldPrice:null, icon:"👕", desc:"2024/25 Home kit. Embroidered crest. S–XXL.",                 rating:4.7, reviews:55,  badge:null},
+  {id:22, name:"Chelsea FC Jersey",      category:"jerseys",    price:185,  oldPrice:210,  icon:"👕", desc:"2024/25 Home & Away kits available. S–XXL.",                  rating:4.6, reviews:38,  badge:"sale"},
+  {id:23, name:"Arsenal Jersey",         category:"jerseys",    price:185,  oldPrice:null, icon:"👕", desc:"2024/25 Home kit. Dri-Fit. S–XXL.",                           rating:4.7, reviews:44,  badge:"new"},
+  // ── Electronics ──
+  {id:24, name:"Wireless Earbuds Pro",   category:"electronics",price:250,  oldPrice:300,  icon:"🎧", desc:"Active noise cancel. 30hr battery. IPX5 waterproof.",        rating:4.8, reviews:103, badge:"hot"},
+  {id:25, name:"Bluetooth Speaker",      category:"electronics",price:280,  oldPrice:null, icon:"🔊", desc:"Portable waterproof speaker. 24hr battery life.",            rating:4.6, reviews:37,  badge:null},
+  {id:26, name:"Power Bank 20000mAh",    category:"electronics",price:220,  oldPrice:260,  icon:"🔋", desc:"Fast charge. Dual USB + USB-C. LED indicator.",              rating:4.7, reviews:49,  badge:"sale"},
+  {id:27, name:"Smart Watch Pro",        category:"electronics",price:350,  oldPrice:420,  icon:"⌚", desc:"Health tracking, notifications, GPS. iOS & Android.",        rating:4.5, reviews:28,  badge:"sale"},
+  {id:28, name:"USB-C Charging Hub 7in1",category:"electronics",price:120,  oldPrice:null, icon:"🔌", desc:"7-in-1 hub: USB3, HDMI, SD card, PD 100W.",                  rating:4.6, reviews:21,  badge:null},
+  {id:29, name:"Electric Fan (Table)",   category:"electronics",price:160,  oldPrice:190,  icon:"🌀", desc:"Quiet 3-speed table fan. USB & Plug power. Energy saving.",  rating:4.5, reviews:34,  badge:"sale"},
+  {id:30, name:"LED Desk Lamp",          category:"electronics",price:95,   oldPrice:null, icon:"💡", desc:"USB-C powered. 3 brightness levels. Eye-care tech.",         rating:4.6, reviews:19,  badge:"new"},
+  {id:31, name:"Flat Screen TV 32\"",    category:"electronics",price:1850, oldPrice:2100, icon:"📺", desc:"Full HD 1080p. HDMI × 2, USB × 1. Wall mount ready.",        rating:4.7, reviews:42,  badge:"sale"},
+  // ── Smartphones ──
+  {id:32, name:"iPhone 15",             category:"smartphones",price:7500, oldPrice:null, icon:"📱", desc:"Apple iPhone 15. 128GB. All colours available.",             rating:4.9, reviews:110, badge:"hot"},
+  {id:33, name:"iPhone 14",             category:"smartphones",price:5800, oldPrice:6500, icon:"📱", desc:"Apple iPhone 14. 128GB. Great condition. All colours.",       rating:4.8, reviews:80,  badge:"sale"},
+  {id:34, name:"Samsung Galaxy A55",    category:"smartphones",price:2800, oldPrice:3100, icon:"📱", desc:"6.6\" AMOLED. 50MP camera. 5000mAh battery.",               rating:4.7, reviews:78,  badge:"sale"},
+  {id:35, name:"Tecno Spark 20 Pro",    category:"smartphones",price:1400, oldPrice:null, icon:"📱", desc:"6.78\" display. 108MP camera. 5000mAh. 4G LTE.",            rating:4.5, reviews:55,  badge:"new"},
+  {id:36, name:"Samsung Galaxy S24",    category:"smartphones",price:5200, oldPrice:5800, icon:"📱", desc:"6.2\" AMOLED. 50MP. Snapdragon 8 Gen 3. 5G.",               rating:4.8, reviews:92,  badge:"hot"},
+  {id:37, name:"Infinix Hot 40 Pro",    category:"smartphones",price:980,  oldPrice:1100, icon:"📱", desc:"6.78\" display. 108MP. 5000mAh. Budget powerhouse.",         rating:4.4, reviews:41,  badge:"sale"},
+  {id:38, name:"Xiaomi Redmi Note 13",  category:"smartphones",price:1650, oldPrice:null, icon:"📱", desc:"6.67\" AMOLED. 200MP camera. 5000mAh. 67W fast charge.",     rating:4.6, reviews:56,  badge:"new"},
+  // ── Bicycles ──
+  {id:39, name:"Mountain Bicycle 26\"", category:"bicycles",   price:1200, oldPrice:null, icon:"🚴", desc:"21-speed aluminium frame mountain bike. All terrains.",      rating:4.5, reviews:19,  badge:"new"},
+  {id:40, name:"Road Racing Bicycle",   category:"bicycles",   price:1800, oldPrice:2100, icon:"🚵", desc:"700c wheels. 18-speed. Lightweight carbon-look frame.",      rating:4.7, reviews:12,  badge:"sale"},
+  {id:41, name:"Kids Bicycle 20\"",     category:"bicycles",   price:650,  oldPrice:null, icon:"🛵", desc:"Steel frame. Training wheels included. Ages 6–10.",          rating:4.6, reviews:24,  badge:"new"},
+  {id:42, name:"Electric Bicycle",      category:"bicycles",   price:4500, oldPrice:5000, icon:"🚲", desc:"36V 250W motor. 40km range. LCD display. USB charge.",       rating:4.7, reviews:8,   badge:"hot"},
+  // ── Houses ──
+  {id:43, name:"3 Bedroom House – Dansoman", category:"houses", price:280000, oldPrice:null, icon:"🏠", desc:"3 bed, 2 bath. Gated community. Running water & electricity. Title deed available.", rating:4.8, reviews:5, badge:"house"},
+  {id:44, name:"2 Bedroom Apartment – Kaneshie", category:"houses", price:165000, oldPrice:180000, icon:"🏢", desc:"2 bed, 1 bath. Ground floor. All amenities. Close to market.", rating:4.7, reviews:3, badge:"house"},
+  {id:45, name:"4 Bedroom House – East Legon", category:"houses", price:750000, oldPrice:null, icon:"🏡", desc:"Luxury 4-bed with pool & garden. Gated estate. Fully furnished option.", rating:4.9, reviews:7, badge:"house"},
+  {id:46, name:"Studio Apartment – Osu", category:"houses", price:95000, oldPrice:110000, icon:"🏨", desc:"Modern studio. Air-conditioned. Security. Bills inclusive option.", rating:4.6, reviews:4, badge:"house"},
+  {id:47, name:"5 Bedroom Mansion – Spintex", category:"houses", price:1200000, oldPrice:null, icon:"🏰", desc:"5-bed luxury mansion. 3 bathrooms. Double garage. CCTV & generator.", rating:5.0, reviews:2, badge:"house"},
+  {id:48, name:"2 Bedroom House – Madina", category:"houses", price:180000, oldPrice:200000, icon:"🏠", desc:"Neat 2-bed. Tiled floors. Veranda. Safe neighbourhood.", rating:4.5, reviews:6, badge:"house"},
+  // ── Land ──
+  {id:49, name:"Half Plot – Kasoa (RC)", category:"land", price:45000, oldPrice:null, icon:"🌍", desc:"Half plot. RC Title. Serene area. Close to Kasoa Highway. Good investment.", rating:4.7, reviews:4, badge:"land"},
+  {id:50, name:"1 Plot – Pokuase",       category:"land", price:85000, oldPrice:95000, icon:"🌿", desc:"Full plot. Indenture & Survey. Dry land. Accessible road. Power nearby.", rating:4.8, reviews:6, badge:"land"},
+  {id:51, name:"2 Plots – Tema (Doc'd)", category:"land", price:320000, oldPrice:null, icon:"🗺️", desc:"2 adjoining plots. Documented. Residential zone. Great for development.", rating:4.9, reviews:3, badge:"land"},
+  {id:52, name:"Half Plot – Adenta",     category:"land", price:60000, oldPrice:70000, icon:"🌱", desc:"Half plot. Indenture available. Quiet residential area. Good road access.", rating:4.6, reviews:5, badge:"land"},
+  {id:53, name:"Commercial Plot – Achimota", category:"land", price:450000, oldPrice:null, icon:"🏗️", desc:"Full commercial plot. Main road frontage. Survey plan available. Rare opportunity.", rating:4.8, reviews:2, badge:"land"},
+  {id:54, name:"1 Plot – Nungua",        category:"land", price:95000, oldPrice:110000, icon:"🏞️", desc:"Full plot. Coastal proximity. RC Title. All year dry land. Fast-selling area.", rating:4.7, reviews:4, badge:"land"},
+];
+
+/* ──────────────────────────────────────────────────────────────
+   USER AUTH SYSTEM (localStorage)
+──────────────────────────────────────────────────────────────── */
+let currentUser = null;
+
+function loadAuth() {
+  try {
+    const saved = localStorage.getItem('gss_user');
+    if (saved) {
+      currentUser = JSON.parse(saved);
+      updateAuthUI();
+    }
+  } catch(e) {}
+}
+
+function saveUser(user) {
+  localStorage.setItem('gss_user', JSON.stringify(user));
+}
+
+function getUsersDB() {
+  try {
+    return JSON.parse(localStorage.getItem('gss_users') || '[]');
+  } catch(e) { return []; }
+}
+
+function saveUsersDB(users) {
+  localStorage.setItem('gss_users', JSON.stringify(users));
+}
+
+function updateAuthUI() {
+  const btn = document.getElementById('authBtn');
+  if (currentUser) {
+    btn.textContent = '👤 ' + currentUser.fname;
+    btn.className = 'auth-btn logged-in';
+    btn.onclick = toggleUserDropdown;
+  } else {
+    btn.textContent = '👤 Login';
+    btn.className = 'auth-btn';
+    btn.onclick = handleAuthClick;
+  }
+}
+
+function handleAuthClick() {
+  if (currentUser) toggleUserDropdown();
+  else openAuth();
+}
+
+function toggleUserDropdown() {
+  document.getElementById('userDropdown').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  const wrap = document.getElementById('userMenuWrap');
+  if (wrap && !wrap.contains(e.target)) {
+    document.getElementById('userDropdown').classList.remove('open');
+  }
+});
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validateGhanaPhone(phone) {
+  const cleaned = phone.replace(/[\s\-+]/g,'');
+  return /^(0|233)(2[0-9]|5[0-9]|3[0-9])[0-9]{7}$/.test(cleaned);
+}
+
+function showFieldError(id, show) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('show', show);
+}
+
+function setInputState(id, state) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('error','success');
+  if (state) el.classList.add(state);
+}
+
+function loginUser() {
+  const identifier = document.getElementById('login-id').value.trim();
+  const password = document.getElementById('login-pw').value;
+  let valid = true;
+
+  if (!identifier) {
+    setInputState('login-id','error');
+    showFieldError('err-login-id', true);
+    valid = false;
+  } else {
+    setInputState('login-id','success');
+    showFieldError('err-login-id', false);
+  }
+
+  if (!password) {
+    setInputState('login-pw','error');
+    showFieldError('err-login-pw', true);
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  const users = getUsersDB();
+  const user = users.find(u =>
+    (u.email.toLowerCase() === identifier.toLowerCase() ||
+     u.phone.replace(/[\s\-+]/g,'') === identifier.replace(/[\s\-+]/g,''))
+  );
+
+  if (!user) {
+    setInputState('login-id','error');
+    document.getElementById('err-login-id').textContent = 'No account found with this email or phone.';
+    showFieldError('err-login-id', true);
+    return;
+  }
+
+  if (user.password !== btoa(password)) {
+    setInputState('login-pw','error');
+    document.getElementById('err-login-pw').textContent = 'Incorrect password. Please try again.';
+    showFieldError('err-login-pw', true);
+    return;
+  }
+
+  // Success
+  currentUser = { fname: user.fname, lname: user.lname, email: user.email, phone: user.phone };
+  saveUser(currentUser);
+  updateAuthUI();
+  closeAuth();
+  showToast('✅ Welcome back, ' + user.fname + '!', 'success');
+}
+
+function registerUser() {
+  const fname  = document.getElementById('reg-fname').value.trim();
+  const lname  = document.getElementById('reg-lname').value.trim();
+  const email  = document.getElementById('reg-email').value.trim();
+  const phone  = document.getElementById('reg-phone').value.trim();
+  const pw     = document.getElementById('reg-pw').value;
+  const pw2    = document.getElementById('reg-pw2').value;
+  let valid = true;
+
+  if (!fname) { setInputState('reg-fname','error'); showFieldError('err-reg-fname',true); valid=false; }
+  else { setInputState('reg-fname','success'); showFieldError('err-reg-fname',false); }
+
+  if (!lname) { setInputState('reg-lname','error'); showFieldError('err-reg-lname',true); valid=false; }
+  else { setInputState('reg-lname','success'); showFieldError('err-reg-lname',false); }
+
+  if (!validateEmail(email)) { setInputState('reg-email','error'); showFieldError('err-reg-email',true); valid=false; }
+  else { setInputState('reg-email','success'); showFieldError('err-reg-email',false); }
+
+  if (!validateGhanaPhone(phone)) { setInputState('reg-phone','error'); showFieldError('err-reg-phone',true); valid=false; }
+  else { setInputState('reg-phone','success'); showFieldError('err-reg-phone',false); }
+
+  if (pw.length < 8) { setInputState('reg-pw','error'); showFieldError('err-reg-pw',true); valid=false; }
+  else { setInputState('reg-pw','success'); showFieldError('err-reg-pw',false); }
+
+  if (pw !== pw2) { setInputState('reg-pw2','error'); showFieldError('err-reg-pw2',true); valid=false; }
+  else if (pw2.length > 0) { setInputState('reg-pw2','success'); showFieldError('err-reg-pw2',false); }
+
+  if (!valid) return;
+
+  const users = getUsersDB();
+  const exists = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+  if (exists) {
+    setInputState('reg-email','error');
+    document.getElementById('err-reg-email').textContent = 'An account with this email already exists.';
+    showFieldError('err-reg-email', true);
+    return;
+  }
+
+  const newUser = { fname, lname, email, phone, password: btoa(pw), orders: [], createdAt: Date.now() };
+  users.push(newUser);
+  saveUsersDB(users);
+
+  currentUser = { fname, lname, email, phone };
+  saveUser(currentUser);
+  updateAuthUI();
+  closeAuth();
+  showToast('🎉 Welcome to Godfred Super Shop, ' + fname + '!', 'success');
+}
+
+function logoutUser() {
+  currentUser = null;
+  localStorage.removeItem('gss_user');
+  updateAuthUI();
+  document.getElementById('userDropdown').classList.remove('open');
+  showToast('👋 You have been logged out.');
+}
+
+function socialLogin(platform) {
+  showToast('📲 ' + platform + ' login coming soon! Please use email/phone for now.');
+}
+
+function showForgotPassword() {
+  showToast('📧 Please contact us on WhatsApp to reset your password: +233 53 838 7322');
+}
+
+function togglePwVisibility(inputId, btn) {
+  const el = document.getElementById(inputId);
+  if (el.type === 'password') { el.type = 'text'; btn.textContent = '🙈'; }
+  else { el.type = 'password'; btn.textContent = '👁️'; }
+}
+
+function checkPasswordStrength(pw) {
+  const bar = document.getElementById('pwBar');
+  const hint = document.getElementById('pwHint');
+  if (!bar) return;
+  let score = 0;
+  if (pw.length >= 8) score++;
+  if (pw.length >= 12) score++;
+  if (/[A-Z]/.test(pw)) score++;
+  if (/[0-9]/.test(pw)) score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+  const colors = ['#d62828','#e8520a','#f5a623','#00b341','#00b341'];
+  const labels = ['Too short','Weak','Fair','Strong','Very strong'];
+  const widths = ['20%','40%','60%','80%','100%'];
+  bar.style.width = pw.length === 0 ? '0' : widths[score-1] || '20%';
+  bar.style.background = pw.length === 0 ? '#e8eef8' : colors[score-1] || colors[0];
+  hint.textContent = pw.length === 0 ? 'Enter a password' : labels[score-1] || labels[0];
+}
+
+/* ──────────────────────────────────────────────────────────────
+   SEARCH SYSTEM
+──────────────────────────────────────────────────────────────── */
+const searchInput = document.getElementById('searchInput');
+const searchDropdown = document.getElementById('searchDropdown');
+
+searchInput.addEventListener('input', function(e) {
+  const q = e.target.value.trim().toLowerCase();
+  renderProducts(currentFilter, e.target.value);
+  if (q.length < 2) { searchDropdown.classList.remove('open'); return; }
+  const results = PRODUCTS.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.desc.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q)
+  ).slice(0, 6);
+
+  if (!results.length) {
+    searchDropdown.innerHTML = `<div class="search-no-result">🔍 No products found for "<strong>${e.target.value}</strong>"</div>`;
+  } else {
+    searchDropdown.innerHTML = results.map(p => `
+      <div class="search-result-item" onclick="quickAddFromSearch(${p.id})">
+        <div class="search-result-icon">${p.icon}</div>
+        <div class="search-result-info">
+          <div class="search-result-name">${p.name}</div>
+          <div class="search-result-cat">${p.category}</div>
+        </div>
+        <div class="search-result-price">GH₵${p.price.toLocaleString()}</div>
+      </div>`).join('');
+  }
+  searchDropdown.classList.add('open');
+});
+
+searchInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { searchDropdown.classList.remove('open'); searchInput.blur(); }
+});
+
+document.addEventListener('click', function(e) {
+  const wrap = document.querySelector('.search-wrap');
+  if (wrap && !wrap.contains(e.target)) searchDropdown.classList.remove('open');
+});
+
+function quickAddFromSearch(id) {
+  addToCart(id);
+  searchDropdown.classList.remove('open');
+  searchInput.value = '';
+  renderProducts('all', '');
+}
+
+/* ──────────────────────────────────────────────────────────────
+   STATE
+──────────────────────────────────────────────────────────────── */
+let cart = [];
+let wishlist = new Set();
+let currentFilter = "all";
+let currentSort = "default";
+
+try {
+  const sc = localStorage.getItem('gss_cart');
+  if (sc) cart = JSON.parse(sc);
+  const sw = localStorage.getItem('gss_wish');
+  if (sw) wishlist = new Set(JSON.parse(sw));
+} catch(e) {}
+
+function saveCartState() {
+  try {
+    localStorage.setItem('gss_cart', JSON.stringify(cart));
+    localStorage.setItem('gss_wish', JSON.stringify([...wishlist]));
+  } catch(e) {}
+}
+
+/* ──────────────────────────────────────────────────────────────
+   RENDER PRODUCTS
+──────────────────────────────────────────────────────────────── */
+function renderProducts(filter, query, sort) {
+  filter = filter !== undefined ? filter : currentFilter;
+  query = query !== undefined ? query : (searchInput ? searchInput.value : '');
+  sort = sort !== undefined ? sort : currentSort;
+
+  const grid = document.getElementById("productsGrid");
+  let filtered = PRODUCTS.filter(p => {
+    const matchCat = filter === "all" || p.category === filter;
+    const q = query.toLowerCase();
+    const matchQ = !q || p.name.toLowerCase().includes(q) ||
+                   p.desc.toLowerCase().includes(q) ||
+                   p.category.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  if (sort === "price-asc") filtered.sort((a,b) => a.price - b.price);
+  else if (sort === "price-desc") filtered.sort((a,b) => b.price - a.price);
+  else if (sort === "rating") filtered.sort((a,b) => b.rating - a.rating);
+  else if (sort === "newest") filtered.sort((a,b) => b.id - a.id);
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--muted);">
+      <div style="font-size:3rem;margin-bottom:14px;">🔍</div>
+      <p>No products found. Try a different search or category.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const badgeHtml = p.badge ? `<span class="badge badge-${p.badge}">${p.badge}</span>` : "";
+    const oldPriceHtml = p.oldPrice ? `<span class="old">GH₵ ${p.oldPrice.toLocaleString()}</span>` : "";
+    const stars = "★".repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? "½" : "");
+    const inWish = wishlist.has(p.id);
+    const isProperty = p.category === 'houses' || p.category === 'land';
+    return `
+      <div class="product-card fade-in" data-id="${p.id}">
+        <div class="product-img">
+          <div class="product-badges">${badgeHtml}</div>
+          <button class="product-wishlist ${inWish?"active":""}" onclick="toggleWishlist(${p.id},this)">${inWish?"❤️":"🤍"}</button>
+          <span style="pointer-events:none;">${p.icon}</span>
+        </div>
+        <div class="product-info">
+          <div class="product-cat">${p.category}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-desc">${p.desc}</div>
+          <div class="product-rating">
+            <span class="stars">${stars}</span>
+            <span class="rating-count">(${p.reviews})</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">${oldPriceHtml}GH₵ ${p.price.toLocaleString()}</div>
+            ${isProperty
+              ? `<button class="add-cart-btn" style="font-size:.7rem;width:auto;padding:0 10px;border-radius:8px;" onclick="enquireProperty(${p.id})">📞</button>`
+              : `<button class="add-cart-btn" onclick="addToCart(${p.id})">+</button>`
+            }
+          </div>
+        </div>
+      </div>`;
+  }).join("");
+
+  requestAnimationFrame(() => {
+    grid.querySelectorAll(".fade-in").forEach((el,i) => {
+      setTimeout(() => el.classList.add("visible"), i * 40);
+    });
+  });
+}
+
+function enquireProperty(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  const msg = encodeURIComponent(`Hello Godfred Super Shop! I am interested in this property:\n\n🏠 ${p.name}\n💰 GH₵ ${p.price.toLocaleString()}\n📝 ${p.desc}\n\nPlease provide more details. Thank you!`);
+  window.open(`https://wa.me/233538387322?text=${msg}`, '_blank');
+}
+
+/* ── Sort ────────────────────────────────────────────────────── */
+function sortProducts() {
+  currentSort = document.getElementById("sortSelect").value;
+  renderProducts(currentFilter, searchInput.value, currentSort);
+}
+
+/* ── Category Filter ─────────────────────────────────────────── */
+function filterByCategory(cat, el) {
+  currentFilter = cat;
+  document.querySelectorAll(".cat-card").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+  renderProducts(currentFilter, searchInput.value);
+  document.getElementById("products").scrollIntoView({ behavior:"smooth", block:"start" });
+}
+
+/* ──────────────────────────────────────────────────────────────
+   CART
+──────────────────────────────────────────────────────────────── */
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  const existing = cart.find(x => x.id === id);
+  if (existing) existing.qty++;
+  else cart.push({...p, qty:1});
+  updateCartUI();
+  saveCartState();
+  showToast('✅ ' + p.name + ' added to cart', 'success');
+  // Animate cart button
+  const countEl = document.getElementById('cartCount');
+  countEl.style.animation = 'none';
+  requestAnimationFrame(() => { countEl.style.animation = ''; });
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  updateCartUI();
+  saveCartState();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) removeFromCart(id);
+  else { updateCartUI(); saveCartState(); }
+}
+
+function updateCartUI() {
+  const total = cart.reduce((s,x) => s + x.price * x.qty, 0);
+  const count = cart.reduce((s,x) => s + x.qty, 0);
+  document.getElementById("cartCount").textContent = count;
+
+  const itemsEl  = document.getElementById("cartItems");
+  const footerEl = document.getElementById("cartFooter");
+  const totalEl  = document.getElementById("cartTotal");
+
+  if (!cart.length) {
+    itemsEl.innerHTML = `<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Your cart is empty.<br/>Start shopping!</p></div>`;
+    footerEl.style.display = "none"; return;
+  }
+
+  footerEl.style.display = "block";
+  totalEl.textContent = `GH₵ ${total.toLocaleString(undefined,{minimumFractionDigits:2})}`;
+
+  itemsEl.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-img">${item.icon}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">GH₵ ${item.price.toLocaleString()}</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},+1)">+</button>
+        </div>
+      </div>
+      <button class="remove-item" onclick="removeFromCart(${item.id})">🗑️</button>
+    </div>`).join("");
+
+  const msg = encodeURIComponent(
+    "Hello Godfred Super Shop! I'd like to order:\n" +
+    cart.map(x => `• ${x.name} x${x.qty} — GH₵ ${(x.price*x.qty).toLocaleString()}`).join("\n") +
+    `\n\nTotal: GH₵ ${total.toLocaleString(undefined,{minimumFractionDigits:2})}\n\nPlease confirm availability and delivery.`
+  );
+  const waLink = `https://wa.me/233538387322?text=${msg}`;
+  document.getElementById("whatsappCheckout").href = waLink;
+  const w2 = document.getElementById("whatsappCheckout2");
+  if (w2) w2.href = waLink;
+}
+
+function openCart() {
+  document.getElementById("cartOverlay").classList.add("open");
+  document.getElementById("cartDrawer").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCart() {
+  document.getElementById("cartOverlay").classList.remove("open");
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+/* ──────────────────────────────────────────────────────────────
+   CHECKOUT — FULL VALIDATION + ORDER SUBMISSION
+──────────────────────────────────────────────────────────────── */
+function openCheckout() {
+  if (!cart.length) { showToast("⚠️ Your cart is empty!"); return; }
+  closeCart();
+  const total = cart.reduce((s,x) => s + x.price * x.qty, 0);
+  const delivery = total >= 500 ? 0 : 30;
+  const grand = total + delivery;
+
+  document.getElementById("checkoutSummary").innerHTML = `
+    <h4>🛍️ Order Summary</h4>
+    ${cart.map(x => `<div class="order-line"><span>${x.name} x${x.qty}</span><span>GH₵ ${(x.price*x.qty).toLocaleString()}</span></div>`).join("")}
+    <div class="order-line"><span>Delivery</span><span>${delivery === 0 ? '🎁 Free (GH₵0)' : `GH₵ ${delivery}`}</span></div>
+    <div class="order-line total"><span>Total</span><span>GH₵ ${grand.toLocaleString(undefined,{minimumFractionDigits:2})}</span></div>
+  `;
+  document.getElementById("checkoutModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+
+  // Pre-fill from logged-in user
+  if (currentUser) {
+    document.getElementById('co-fname').value = currentUser.fname || '';
+    document.getElementById('co-lname').value = currentUser.lname || '';
+    document.getElementById('co-phone').value = currentUser.phone || '';
+  }
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function placeOrder() {
+  // Validate delivery details
+  const fname   = document.getElementById('co-fname').value.trim();
+  const lname   = document.getElementById('co-lname').value.trim();
+  const phone   = document.getElementById('co-phone').value.trim();
+  const address = document.getElementById('co-address').value.trim();
+  let valid = true;
+
+  if (!fname) { setInputState('co-fname','error'); showFieldError('err-fname',true); valid=false; }
+  else { setInputState('co-fname','success'); showFieldError('err-fname',false); }
+
+  if (!lname) { setInputState('co-lname','error'); showFieldError('err-lname',true); valid=false; }
+  else { setInputState('co-lname','success'); showFieldError('err-lname',false); }
+
+  if (!validateGhanaPhone(phone)) {
+    setInputState('co-phone','error');
+    document.getElementById('err-phone').textContent = 'Please enter a valid Ghana phone number (e.g. 024XXXXXXX)';
+    showFieldError('err-phone',true); valid=false;
+  } else { setInputState('co-phone','success'); showFieldError('err-phone',false); }
+
+  if (!address) { setInputState('co-address','error'); showFieldError('err-address',true); valid=false; }
+  else { setInputState('co-address','success'); showFieldError('err-address',false); }
+
+  // Validate payment method
+  const activeTab = document.querySelector('.pay-tab.active');
+  const activePanel = document.querySelector('.pay-panel.active');
+  const panelId = activePanel ? activePanel.id : '';
+
+  if (panelId === 'panel-mtn') {
+    const sender = document.getElementById('mtn-sender').value.trim();
+    const txid   = document.getElementById('mtn-txid').value.trim();
+    if (!validateGhanaPhone(sender)) {
+      setInputState('mtn-sender','error'); showFieldError('err-mtn-sender',true); valid=false;
+    } else { setInputState('mtn-sender','success'); showFieldError('err-mtn-sender',false); }
+    if (!txid || txid.length < 6) {
+      setInputState('mtn-txid','error'); showFieldError('err-mtn-txid',true); valid=false;
+    } else { setInputState('mtn-txid','success'); showFieldError('err-mtn-txid',false); }
+  } else if (panelId === 'panel-telecel') {
+    const sender = document.getElementById('tcl-sender').value.trim();
+    const txid   = document.getElementById('tcl-txid').value.trim();
+    if (!validateGhanaPhone(sender)) {
+      setInputState('tcl-sender','error'); showFieldError('err-tcl-sender',true); valid=false;
+    } else { setInputState('tcl-sender','success'); showFieldError('err-tcl-sender',false); }
+    if (!txid || txid.length < 6) {
+      setInputState('tcl-txid','error'); showFieldError('err-tcl-txid',true); valid=false;
+    } else { setInputState('tcl-txid','success'); showFieldError('err-tcl-txid',false); }
+  } else if (panelId === 'panel-card') {
+    const num  = document.getElementById('card-num').value.replace(/\s/g,'');
+    const exp  = document.getElementById('card-exp').value;
+    const cvv  = document.getElementById('card-cvv').value;
+    const name = document.getElementById('card-name').value.trim();
+    if (!/^\d{16}$/.test(num)) { setInputState('card-num','error'); showFieldError('err-card-num',true); valid=false; }
+    else { setInputState('card-num','success'); showFieldError('err-card-num',false); }
+    if (!/^\d{2}\/\d{2}$/.test(exp)) { setInputState('card-exp','error'); showFieldError('err-card-exp',true); valid=false; }
+    else { setInputState('card-exp','success'); showFieldError('err-card-exp',false); }
+    if (!/^\d{3,4}$/.test(cvv)) { setInputState('card-cvv','error'); showFieldError('err-card-cvv',true); valid=false; }
+    else { setInputState('card-cvv','success'); showFieldError('err-card-cvv',false); }
+    if (!name) { setInputState('card-name','error'); showFieldError('err-card-name',true); valid=false; }
+    else { setInputState('card-name','success'); showFieldError('err-card-name',false); }
+  }
+
+  if (!valid) {
+    showToast('⚠️ Please fill all required fields correctly.', 'error');
+    return;
+  }
+
+  // Generate order reference
+  const ref = 'GSS-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).substr(2,4).toUpperCase();
+  const total = cart.reduce((s,x) => s + x.price * x.qty, 0);
+  const delivery = total >= 500 ? 0 : 30;
+  const grand = total + delivery;
+
+  // Save order to user if logged in
+  if (currentUser) {
+    const users = getUsersDB();
+    const userIdx = users.findIndex(u => u.email === currentUser.email);
+    if (userIdx >= 0) {
+      if (!users[userIdx].orders) users[userIdx].orders = [];
+      users[userIdx].orders.push({
+        ref, date: new Date().toLocaleDateString(), items: cart.map(x=>({name:x.name,qty:x.qty,price:x.price})),
+        total: grand, status:'Pending'
+      });
+      saveUsersDB(users);
+    }
+  }
+
+  // Build WhatsApp confirmation link
+  const city = document.getElementById('co-city').value || 'Accra';
+  const region = document.getElementById('co-region').value || 'Greater Accra';
+  const notes = document.getElementById('co-notes').value;
+  const payMethod = activeTab ? activeTab.textContent.replace(/[^\w\s]/g,'').trim() : 'Unknown';
+
+  const waMsg = encodeURIComponent(
+    `🛍️ NEW ORDER – ${ref}\n\n` +
+    `👤 Customer: ${fname} ${lname}\n📞 Phone: ${phone}\n📍 Address: ${address}, ${city}, ${region}\n${notes ? `📝 Notes: ${notes}\n` : ''}` +
+    `\n🛒 Items:\n` + cart.map(x=>`  • ${x.name} x${x.qty} — GH₵${(x.price*x.qty).toLocaleString()}`).join('\n') +
+    `\n\n💰 Subtotal: GH₵${total.toLocaleString()}\n🚚 Delivery: GH₵${delivery}\n✅ TOTAL: GH₵${grand.toLocaleString(undefined,{minimumFractionDigits:2})}` +
+    `\n💳 Payment: ${payMethod}\n\nPlease confirm this order. Thank you! 🙏`
+  );
+
+  closeCheckout();
+
+  document.getElementById('orderRef').innerHTML = `Order Reference: <span>${ref}</span>`;
+  document.getElementById('orderWhatsappLink').href = `https://wa.me/233538387322?text=${waMsg}`;
+  document.getElementById('orderSuccessModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  cart = [];
+  updateCartUI();
+  saveCartState();
+}
+
+function closeOrderSuccess() {
+  document.getElementById('orderSuccessModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ── Payment Tabs ────────────────────────────────────────────── */
+function selectPayTab(id, el) {
+  document.querySelectorAll(".pay-tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".pay-panel").forEach(p => p.classList.remove("active"));
+  el.classList.add("active");
+  document.getElementById("panel-" + id).classList.add("active");
+}
+
+/* ── Card formatting ─────────────────────────────────────────── */
+function formatCardNumber(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,16);
+  input.value = v.replace(/(.{4})/g,'$1 ').trim();
+}
+
+function formatExpiry(input) {
+  let v = input.value.replace(/\D/g,'').substring(0,4);
+  if (v.length >= 2) v = v.substring(0,2) + '/' + v.substring(2);
+  input.value = v;
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => showToast('📋 Number copied: ' + text, 'success'))
+    .catch(() => showToast('Number: ' + text));
+}
+
+/* ──────────────────────────────────────────────────────────────
+   AUTH MODAL OPEN/CLOSE
+──────────────────────────────────────────────────────────────── */
+function openAuth() {
+  document.getElementById("authModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeAuth() {
+  document.getElementById("authModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function switchAuth(tab, el) {
+  document.querySelectorAll(".auth-tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".auth-panel").forEach(p => p.classList.remove("active"));
+  el.classList.add("active");
+  document.getElementById("auth-" + tab).classList.add("active");
+}
+
+/* ──────────────────────────────────────────────────────────────
+   WISHLIST
+──────────────────────────────────────────────────────────────── */
+function toggleWishlist(id, btn) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (wishlist.has(id)) {
+    wishlist.delete(id);
+    btn.textContent = "🤍";
+    btn.classList.remove("active");
+    showToast("Removed from wishlist");
+  } else {
+    wishlist.add(id);
+    btn.textContent = "❤️";
+    btn.classList.add("active");
+    showToast("❤️ " + p.name + " added to wishlist");
+  }
+  saveCartState();
+}
+
+function openWishlistModal() {
+  const modal = document.getElementById('wishlistModal');
+  const container = document.getElementById('wishlistItems');
+  const items = [...wishlist].map(id => PRODUCTS.find(x => x.id === id)).filter(Boolean);
+  if (!items.length) {
+    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--muted);">
+      <div style="font-size:3rem;margin-bottom:12px;">🤍</div><p>Your wishlist is empty.</p></div>`;
+  } else {
+    container.innerHTML = items.map(p => `
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f0f4fa;">
+        <div style="font-size:2rem;width:50px;height:50px;background:var(--off);border-radius:10px;display:flex;align-items:center;justify-content:center;">${p.icon}</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:.9rem;">${p.name}</div>
+          <div style="font-family:var(--ff-head);color:var(--blue);font-weight:700;">GH₵${p.price.toLocaleString()}</div>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(${p.id});showToast('Added to cart!')">+</button>
+        <button onclick="removeFromWishlist(${p.id})" style="background:none;border:none;color:var(--muted);font-size:1rem;cursor:pointer;">🗑️</button>
+      </div>`).join('');
+  }
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function removeFromWishlist(id) {
+  wishlist.delete(id);
+  saveCartState();
+  openWishlistModal();
+}
+
+function closeWishlistModal() {
+  document.getElementById('wishlistModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ──────────────────────────────────────────────────────────────
+   MY ORDERS MODAL
+──────────────────────────────────────────────────────────────── */
+function openMyOrders() {
+  document.getElementById('userDropdown').classList.remove('open');
+  if (!currentUser) { openAuth(); return; }
+  const users = getUsersDB();
+  const user = users.find(u => u.email === currentUser.email);
+  const orders = user && user.orders ? user.orders : [];
+  const container = document.getElementById('ordersBody');
+  if (!orders.length) {
+    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--muted);">
+      <div style="font-size:3rem;margin-bottom:12px;">📦</div><p>You have no orders yet.</p></div>`;
+  } else {
+    container.innerHTML = orders.slice().reverse().map(o => `
+      <div style="background:var(--off);border-radius:12px;padding:16px;margin-bottom:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <strong style="font-size:.88rem;color:var(--navy);">${o.ref}</strong>
+          <span style="background:#e8f4ff;color:var(--blue);font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px;">${o.status}</span>
+        </div>
+        <div style="font-size:.8rem;color:var(--muted);margin-bottom:8px;">📅 ${o.date}</div>
+        ${o.items.map(i => `<div style="font-size:.82rem;padding:3px 0;display:flex;justify-content:space-between;"><span>${i.name} x${i.qty}</span><span>GH₵${(i.price*i.qty).toLocaleString()}</span></div>`).join('')}
+        <div style="border-top:1px solid #dde3ee;margin-top:8px;padding-top:8px;font-weight:700;font-size:.88rem;display:flex;justify-content:space-between;">
+          <span>Total</span><span>GH₵${o.total.toLocaleString(undefined,{minimumFractionDigits:2})}</span>
+        </div>
+      </div>`).join('');
+  }
+  document.getElementById('ordersModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+/* ──────────────────────────────────────────────────────────────
+   GPS LOCATION DETECTION
+──────────────────────────────────────────────────────────────── */
+function detectLocation() {
+  const btn = document.getElementById('gpsBtn');
+  const result = document.getElementById('locationResult');
+  const text = document.getElementById('locationText');
+  const coords = document.getElementById('locationCoords');
+  btn.classList.add('detecting');
+  btn.querySelector('div div:first-child').textContent = 'Detecting...';
+  if (!navigator.geolocation) {
+    showToast('❌ Geolocation is not supported by your browser.');
+    btn.classList.remove('detecting');
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      const lat = pos.coords.latitude.toFixed(5);
+      const lon = pos.coords.longitude.toFixed(5);
+      btn.classList.remove('detecting');
+      btn.querySelector('div div:first-child').textContent = '✅ Location Detected!';
+      text.textContent = 'GPS coordinates captured successfully.';
+      coords.textContent = `Lat: ${lat}, Lon: ${lon}`;
+      result.classList.add('show');
+      // Reverse geocode with OpenStreetMap (free)
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
+        .then(r => r.json())
+        .then(data => {
+          const display = data.display_name || '';
+          text.textContent = display.split(',').slice(0,4).join(', ');
+        }).catch(() => {});
+      showToast('📍 Location detected! Use it to fill your delivery address.', 'success');
+    },
+    function(err) {
+      btn.classList.remove('detecting');
+      btn.querySelector('div div:first-child').textContent = '📡 Detect My Location';
+      const msgs = {1:'Location access denied. Please allow location in your browser.',2:'Location unavailable. Please enter address manually.',3:'Location request timed out.'};
+      showToast('⚠️ ' + (msgs[err.code] || 'Could not detect location.'), 'error');
+    },
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+
+function detectLocationCheckout() {
+  if (!navigator.geolocation) { showToast('Geolocation not supported.'); return; }
+  showToast('📡 Detecting your location...');
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      const lat = pos.coords.latitude.toFixed(5);
+      const lon = pos.coords.longitude.toFixed(5);
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
+        .then(r => r.json())
+        .then(data => {
+          const addr = data.address || {};
+          const street = addr.road || addr.pedestrian || '';
+          const suburb = addr.suburb || addr.neighbourhood || addr.city_district || '';
+          const city = addr.city || addr.town || 'Accra';
+          document.getElementById('co-address').value = [street, suburb].filter(Boolean).join(', ') || 'Near ' + (data.display_name || '').split(',')[0];
+          document.getElementById('co-city').value = city;
+          showToast('📍 Address auto-filled from your GPS location!', 'success');
+        }).catch(() => {
+          document.getElementById('co-address').value = `GPS: ${lat}, ${lon}`;
+          showToast('📍 GPS coordinates added to address field.', 'success');
+        });
+    },
+    function() { showToast('Could not get location. Please enter manually.', 'error'); },
+    { enableHighAccuracy: true, timeout: 8000 }
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────
+   CONTACT FORM
+──────────────────────────────────────────────────────────────── */
+function sendContactForm() {
+  const name    = document.getElementById('contactName').value.trim();
+  const phone   = document.getElementById('contactPhone').value.trim();
+  const subject = document.getElementById('contactSubject').value;
+  const message = document.getElementById('contactMessage').value.trim();
+
+  if (!name || !phone || !subject || !message) {
+    showToast('⚠️ Please fill all required fields.', 'error');
+    return;
+  }
+  if (!validateGhanaPhone(phone)) {
+    showToast('⚠️ Please enter a valid Ghana phone number.', 'error');
+    return;
+  }
+
+  const waMsg = encodeURIComponent(
+    `📩 Contact Form Message\n\n` +
+    `👤 Name: ${name}\n📞 Phone: ${phone}\n` +
+    (document.getElementById('contactEmail').value ? `✉️ Email: ${document.getElementById('contactEmail').value}\n` : '') +
+    `📌 Subject: ${subject}\n\n💬 Message:\n${message}`
+  );
+  window.open(`https://wa.me/233538387322?text=${waMsg}`, '_blank');
+  document.getElementById('contactName').value='';
+  document.getElementById('contactPhone').value='';
+  document.getElementById('contactEmail').value='';
+  document.getElementById('contactSubject').value='';
+  document.getElementById('contactMessage').value='';
+  showToast('✅ Message sent via WhatsApp! We\'ll reply shortly.', 'success');
+}
+
+/* ──────────────────────────────────────────────────────────────
+   TOAST
+──────────────────────────────────────────────────────────────── */
+let toastTimer;
+function showToast(msg, type) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = 'show' + (type ? ' ' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show","success","error"), 3500);
+}
+
+/* ── Mobile Menu ─────────────────────────────────────────────── */
+function toggleMobileMenu() {
+  document.getElementById("navLinks").classList.toggle("mobile-open");
+}
+
+/* ── Close modals on overlay click ──────────────────────────── */
+['checkoutModal','authModal','wishlistModal','ordersModal','orderSuccessModal'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', function(e) { if (e.target === this) { this.classList.remove('open'); document.body.style.overflow=''; } });
+});
+
+/* ── Header scroll ───────────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+/* ── Scroll Animations ───────────────────────────────────────── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".fade-in,.fade-in-left,.fade-in-right").forEach(el => io.observe(el));
+
+/* ── Init ────────────────────────────────────────────────────── */
+loadAuth();
+renderProducts();
+updateCartUI();
+</script>
+</body>
+</html>
